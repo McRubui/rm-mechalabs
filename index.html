@@ -15,11 +15,11 @@ body {
 }
 header {
   text-align: center;
-  padding: 90px 20px;
+  padding: 80px 20px;
 }
-.logo {
-  font-size: 2.5rem;
-  font-weight: bold;
+.logo img {
+  width: 120px;
+  margin-bottom: 15px;
 }
 .tagline {
   color: #9ca3af;
@@ -27,13 +27,16 @@ header {
 }
 .btn {
   display: inline-block;
-  margin-top: 25px;
+  margin: 10px;
   padding: 14px 32px;
   background: #2563eb;
   color: white;
   text-decoration: none;
   border-radius: 30px;
   font-weight: bold;
+}
+.email-btn {
+  background: #0ea5e9;
 }
 section {
   padding: 70px 20px;
@@ -55,34 +58,21 @@ h2 {
   border-radius: 16px;
   padding: 25px;
 }
-.gallery div {
-  height: 160px;
-  background: #020617;
-  border: 1px dashed #1e293b;
-  border-radius: 12px;
+.job-card {
+  border: 2px solid #2563eb;
+  border-radius: 16px;
+  padding: 25px;
+}
+.job-row {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #9ca3af;
+  justify-content: space-between;
+  border-bottom: 1px dashed #1e293b;
+  padding: 8px 0;
 }
-form input, form textarea {
+.profile-image img {
   width: 100%;
-  padding: 12px;
-  margin-bottom: 15px;
-  border-radius: 8px;
-  border: none;
-}
-form button {
-  background: #2563eb;
-  color: white;
-  padding: 14px;
-  border: none;
-  border-radius: 25px;
-  font-size: 1rem;
-  width: 100%;
-}
-.contact {
-  text-align: center;
+  border-radius: 20px;
+  border: 1px solid #1e293b;
 }
 footer {
   text-align: center;
@@ -108,18 +98,20 @@ footer {
 <body>
 
 <header>
-  <div class="logo">RM Mechalabs</div>
-  <p class="tagline">Precision Engineering • Smart Automation • Technical Design</p>
-  <a href="#contact" class="btn">Request a Consultation</a>
+  <div class="logo">
+    <img src="logo.png" alt="RM Mechalabs Logo">
+  </div>
+  <h1>RM Mechalabs</h1>
+  <p class="tagline">Mechanical Design • Automation • Engineering Consultancy</p>
+  <a href="#contact" class="btn">Consultation</a>
+  <a href="mailto:info@rmmechalabs.com" class="btn email-btn">Email Us</a>
 </header>
 
 <section>
-<h2>About Us</h2>
-<p style="text-align:center;color:#9ca3af">
-RM Mechalabs provides professional mechanical engineering solutions specializing in
-machine automation, AutoCAD design, and engineering consultancy for industrial and
-production environments.
-</p>
+<h2>Company Profile</h2>
+<div class="profile-image">
+  <img src="company-profile.jpg" alt="RM Mechalabs Company Profile">
+</div>
 </section>
 
 <section>
@@ -127,45 +119,33 @@ production environments.
 <div class="grid">
   <div class="card"><h3>Machine Automation</h3><p>Design and implementation of automated mechanical systems.</p></div>
   <div class="card"><h3>Engineering Consultancy</h3><p>Project planning, feasibility studies, and optimization.</p></div>
-  <div class="card"><h3>AutoCAD & Technical Design</h3><p>Fabrication-ready drawings and layouts.</p></div>
+  <div class="card"><h3>AutoCAD & Technical Design</h3><p>Fabrication-ready engineering drawings.</p></div>
 </div>
 </section>
 
 <section>
-<h2>Projects & Gallery</h2>
-<div class="grid gallery">
-  <div>Pneumatic Press</div>
-  <div>Conveyor System</div>
-  <div>Machine Layout CAD</div>
+<h2>Engineering Job Card</h2>
+<div class="job-card">
+  <div class="job-row"><strong>Job No:</strong><span>RM-001</span></div>
+  <div class="job-row"><strong>Client:</strong><span>________________</span></div>
+  <div class="job-row"><strong>Project:</strong><span>Automation / Design</span></div>
+  <div class="job-row"><strong>Date:</strong><span>____________</span></div>
+  <div class="job-row"><strong>Engineer:</strong><span>RM Mechalabs</span></div>
+  <div class="job-row"><strong>Status:</strong><span>In Progress</span></div>
 </div>
 </section>
 
-<section>
-<h2>Pricing (Indicative)</h2>
-<div class="grid">
-  <div class="card">Automation Design – from KES 15,000</div>
-  <div class="card">AutoCAD Drawings – from KES 5,000</div>
-  <div class="card">Consultancy – Project Based</div>
-</div>
-</section>
-
-<section id="contact" class="contact">
-<h2>Contact Us</h2>
+<section id="contact" style="text-align:center">
+<h2>Contact</h2>
 <p>📞 <strong>+254798470854</strong></p>
-
-<form>
-  <input type="text" placeholder="Your Name" required>
-  <input type="email" placeholder="Your Email" required>
-  <textarea rows="5" placeholder="Your Message"></textarea>
-  <button type="submit">Send Message</button>
-</form>
+<p>📧 <strong>info@rmmechalabs.com</strong></p>
 </section>
 
 <footer>
-© 2026 RM Mechalabs — Engineering Excellence
+© 2026 RM Mechalabs — Precision Engineering
 </footer>
 
 <a class="whatsapp" href="https://wa.me/254798470854" target="_blank">WhatsApp</a>
 
 </body>
-  </html>
+</html>
