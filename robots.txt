@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://rm-mechalabs.vercel.app/sitemap.xml
