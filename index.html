@@ -1,186 +1,220 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- GOOGLE SEARCH CONSOLE VERIFICATION -->
-  <meta name="google-site-verification" content="NuED6b5l6h_imfXzS8-f8XdCCZ_hGpUA5ACwl_B8Ry4" />
+<meta name="google-site-verification" content="NuED6b5l6h_imfXzS8-f8XdCCZ_hGpUA5ACwl_B8Ry4">
 
-  <!-- SEO -->
-  <title>RM Mechalabs | Mechanical Design & Automation</title>
-  <meta name="description" content="RM Mechalabs is an engineering company specializing in mechanical design, automation, and engineering consultancy. Founded by Mark Rubui." />
-  <meta name="keywords" content="RM Mechalabs, Mechanical Design, Automation, Engineering Consultancy, AutoCAD Kenya" />
-  <meta name="author" content="RM Mechalabs" />
+<title>RM Mechalabs | Mechanical Design & Automation</title>
+<meta name="description" content="RM Mechalabs – Mechanical Design, Automation & Engineering Consultancy. Founded by Mark Rubui.">
 
-  <!-- STRUCTURED DATA (GOOGLE KNOWLEDGE PANEL) -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "RM Mechalabs",
-    "url": "https://rm-mechalabs.vercel.app",
-    "logo": "https://rm-mechalabs.vercel.app/logo.png",
-    "description": "RM Mechalabs is an engineering company specializing in mechanical design, automation, and engineering consultancy.",
-    "founder": {
-      "@type": "Person",
-      "name": "Mark Rubui",
-      "jobTitle": "Founder & CEO"
-    },
-    "contactPoint": {
-      "@type": "ContactPoint",
-      "telephone": "+254798470854",
-      "contactType": "customer service"
-    }
-  }
-  </script>
+<style>
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: #0b1220;
+  color: #e5e7eb;
+}
 
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #0f172a;
-      color: #e5e7eb;
-      line-height: 1.6;
-    }
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 20px;
+}
 
-    header {
-      display: flex;
-      align-items: center;
-      gap: 15px;
-      padding: 20px;
-      background: linear-gradient(90deg, #020617, #020617);
-      border-bottom: 1px solid #1e293b;
-    }
+/* HEADER */
+.header {
+  background: linear-gradient(135deg, #020617, #020617);
+  padding: 40px 20px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
 
-    header img {
-      height: 50px;
-    }
+.header img {
+  width: 110px;
+}
 
-    header h1 {
-      margin: 0;
-      font-size: 22px;
-    }
+.header h1 {
+  margin: 0;
+  font-size: 34px;
+}
 
-    header p {
-      margin: 0;
-      font-size: 14px;
-      color: #94a3b8;
-    }
+.header p {
+  margin: 5px 0 0;
+  color: #94a3b8;
+}
 
-    section {
-      max-width: 1000px;
-      margin: auto;
-      padding: 40px 20px;
-    }
+/* SECTION TITLES */
+h2 {
+  color: #38bdf8;
+  margin-bottom: 15px;
+}
 
-    h2 {
-      color: #38bdf8;
-      margin-bottom: 10px;
-    }
+/* CARD */
+.card {
+  background: #020617;
+  border: 1px solid #1e293b;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
 
-    .services ul {
-      list-style: none;
-      padding: 0;
-    }
+/* GRID */
+.grid-2 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+}
 
-    .services li {
-      background: #020617;
-      margin-bottom: 10px;
-      padding: 15px;
-      border-left: 4px solid #38bdf8;
-    }
+/* SERVICES */
+ul {
+  padding-left: 20px;
+}
 
-    .founder-box {
-      background: #020617;
-      padding: 20px;
-      border-radius: 8px;
-      border-left: 4px solid #22c55e;
-    }
+ul li {
+  margin-bottom: 8px;
+}
 
-    footer {
-      text-align: center;
-      padding: 20px;
-      color: #94a3b8;
-      font-size: 14px;
-      border-top: 1px solid #1e293b;
-    }
+/* FOUNDER */
+.founder {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
 
-    /* WHATSAPP BUTTON */
-    .whatsapp {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background: #25d366;
-      color: white;
-      padding: 14px 18px;
-      border-radius: 50px;
-      text-decoration: none;
-      font-weight: bold;
-      box-shadow: 0 0 0 rgba(37, 211, 102, 0.7);
-      animation: pulse 1.5s infinite;
-      z-index: 1000;
-    }
+.founder img {
+  width: 90px;
+}
 
-    @keyframes pulse {
-      0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
-      70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
-      100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
-    }
-  </style>
+/* FOOTER */
+footer {
+  background: #020617;
+  text-align: center;
+  padding: 20px;
+  color: #94a3b8;
+}
+
+/* WHATSAPP */
+.whatsapp {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #25d366;
+  color: white;
+  padding: 14px 20px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: bold;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 rgba(37,211,102,0.6); }
+  70% { box-shadow: 0 0 0 16px rgba(37,211,102,0); }
+  100% { box-shadow: 0 0 0 0 rgba(37,211,102,0); }
+}
+</style>
 </head>
 
 <body>
 
-<header>
+<!-- HEADER -->
+<div class="header container">
   <img src="logo.png" alt="RM Mechalabs Logo">
   <div>
     <h1>RM MECHALABS</h1>
     <p>Mechanical Design | Automation | Engineering Consultancy</p>
   </div>
-</header>
+</div>
 
-<section>
-  <h2>Company Profile</h2>
-  <p>
-    RM Mechalabs is a forward-thinking engineering company delivering innovative
-    solutions in mechanical design, automation systems, and professional
-    engineering consultancy. We combine practical engineering knowledge with
-    modern design tools to solve real-world industrial challenges.
-  </p>
-</section>
+<div class="container">
 
-<section class="services">
-  <h2>Our Services</h2>
-  <ul>
-    <li><strong>Mechanical Design:</strong> AutoCAD & technical drawings</li>
-    <li><strong>Automation:</strong> Machine automation & system optimization</li>
-    <li><strong>Engineering Consultancy:</strong> Project planning & technical support</li>
-    <li><strong>Service Requests:</strong> Custom engineering solutions</li>
-  </ul>
-</section>
-
-<section>
-  <h2>Leadership</h2>
-  <div class="founder-box">
-    <p><strong>Founder & CEO:</strong> Mark Rubui</p>
+  <!-- COMPANY OVERVIEW -->
+  <div class="card">
+    <h2>Company Overview</h2>
     <p>
-      A mechanical engineering professional with a passion for innovation,
-      automation, and industrial problem-solving.
+      RM Mechalabs is an engineering solutions company specializing in
+      mechanical design, machine automation, engineering consultation,
+      and AutoCAD technical drafting. We focus on delivering efficient,
+      reliable, and innovative engineering solutions.
     </p>
   </div>
-</section>
+
+  <!-- CORE SERVICES -->
+  <div class="grid-2">
+    <div class="card">
+      <h2>Core Services</h2>
+      <ul>
+        <li>Machine Automation</li>
+        <li>Mechanical System Design</li>
+        <li>Engineering Project Consultation</li>
+        <li>AutoCAD & Technical Drawings</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>AutoCAD & Technical Design</h2>
+      <ul>
+        <li>Engineering drawings</li>
+        <li>Production-ready designs</li>
+        <li>Fabrication support</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- VISION & MISSION -->
+  <div class="grid-2">
+    <div class="card">
+      <h2>Vision</h2>
+      <p>
+        To become a trusted engineering solutions provider delivering
+        innovative and sustainable mechanical designs.
+      </p>
+    </div>
+
+    <div class="card">
+      <h2>Mission</h2>
+      <p>
+        To provide affordable, efficient, and high-quality engineering
+        solutions that meet client and industry standards.
+      </p>
+    </div>
+  </div>
+
+  <!-- CORE VALUES -->
+  <div class="card">
+    <h2>Core Values</h2>
+    <ul>
+      <li>Engineering excellence</li>
+      <li>Innovation & reliability</li>
+      <li>Professional integrity</li>
+    </ul>
+  </div>
+
+  <!-- FOUNDER -->
+  <div class="card founder">
+    <img src="logo.png" alt="Founder">
+    <div>
+      <h2>Mark Rubui</h2>
+      <p><strong>Founder & CEO</strong></p>
+      <p>Mechanical Engineer</p>
+      <p>📞 +254 798 470 854</p>
+    </div>
+  </div>
+
+</div>
 
 <footer>
-  © 2026 RM Mechalabs | Founded by Mark Rubui
+  © 2026 RM Mechalabs | Mechanical Design & Automation
 </footer>
 
-<!-- WHATSAPP BUTTON -->
-<a
-  class="whatsapp"
-  href="https://wa.me/254798470854?text=Hello%20RM%20Mechalabs,%20I%20would%20like%20to%20inquire%20about%20your%20engineering%20services."
-  target="_blank"
->
+<a class="whatsapp"
+   href="https://wa.me/254798470854?text=Hello%20RM%20Mechalabs,%20I%20would%20like%20to%20inquire%20about%20your%20services."
+   target="_blank">
   WhatsApp
 </a>
 
