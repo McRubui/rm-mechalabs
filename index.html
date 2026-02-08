@@ -1,218 +1,235 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- GOOGLE SEARCH CONSOLE VERIFICATION -->
-  <meta name="google-site-verification" content="NuED6b5l6h_imfXzS8-f8XdCCZ_hGpUA5ACwl_B8Ry4" />
+<!-- GOOGLE VERIFICATION -->
+<meta name="google-site-verification" content="NuED6b5l6h_imfXzS8-f8XdCCZ_hGpUA5ACwl_B8Ry4">
 
-  <!-- SEO -->
-  <title>RM Mechalabs | Mechanical Design & Automation</title>
-  <meta name="description" content="RM Mechalabs is an engineering company specializing in mechanical design, automation, AutoCAD drafting, and engineering consultation. Founded by Mark Rubui." />
-  <meta name="keywords" content="RM Mechalabs, Mechanical Design, Automation, AutoCAD, Engineering Company Kenya" />
-  <meta name="author" content="RM Mechalabs" />
+<title>RM Mechalabs | Mechanical Design & Automation</title>
+<meta name="description" content="RM Mechalabs – Mechanical Design, Automation & Engineering Consultancy. Founded by Mark Rubui.">
 
-  <!-- STRUCTURED DATA (GOOGLE KNOWS FOUNDER & CEO) -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "RM Mechalabs",
-    "url": "https://rm-mechalabs.vercel.app",
-    "logo": "https://rm-mechalabs.vercel.app/logo.png",
-    "description": "Mechanical design and automation engineering company",
-    "founder": {
-      "@type": "Person",
-      "name": "Mark Rubui",
-      "jobTitle": "Founder & CEO"
-    },
-    "contactPoint": {
-      "@type": "ContactPoint",
-      "telephone": "+254798470854",
-      "contactType": "customer service"
-    }
-  }
-  </script>
+<style>
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: #0b1220;
+  color: #e5e7eb;
+}
 
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #0f172a;
-      color: #e5e7eb;
-    }
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 20px;
+}
 
-    header {
-      background: linear-gradient(135deg, #020617, #020617);
-      padding: 50px 20px;
-      text-align: center;
-    }
+/* HEADER */
+.header {
+  background: linear-gradient(135deg, #020617, #020617);
+  padding: 40px 20px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
 
-    header img {
-      width: 120px;
-      margin-bottom: 20px;
-    }
+.header img {
+  width: 110px;
+}
 
-    header h1 {
-      font-size: 36px;
-      margin: 0;
-    }
+.header h1 {
+  margin: 0;
+  font-size: 34px;
+}
 
-    header p {
-      color: #94a3b8;
-      margin-top: 10px;
-    }
+.header p {
+  margin: 5px 0 0;
+  color: #94a3b8;
+}
 
-    section {
-      padding: 60px 20px;
-      max-width: 1000px;
-      margin: auto;
-    }
+/* CARDS */
+.card {
+  background: #020617;
+  border: 1px solid #1e293b;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 20px;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease;
+}
 
-    h2 {
-      color: #38bdf8;
-      margin-bottom: 20px;
-      text-align: center;
-    }
+.card.show {
+  opacity: 1;
+  transform: translateY(0);
+}
 
-    .profile {
-      text-align: center;
-      line-height: 1.6;
-    }
+h2 {
+  color: #38bdf8;
+}
 
-    .founder-box {
-      margin-top: 30px;
-      padding: 20px;
-      border: 1px solid #1e293b;
-      border-radius: 12px;
-      background: #020617;
-    }
+.grid-2 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+}
 
-    .services {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 20px;
-    }
+ul {
+  padding-left: 20px;
+}
 
-    .service-card {
-      background: #020617;
-      padding: 20px;
-      border-radius: 12px;
-      border: 1px solid #1e293b;
-    }
+/* FORM */
+form input, form select, form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 6px;
+  border: none;
+}
 
-    form {
-      display: grid;
-      gap: 15px;
-    }
+form button {
+  background: #38bdf8;
+  color: #020617;
+  border: none;
+  padding: 12px;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+}
 
-    input, textarea, button {
-      padding: 12px;
-      border-radius: 8px;
-      border: none;
-      font-size: 16px;
-    }
+/* FOUNDER */
+.founder {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  flex-wrap: wrap;
+}
 
-    input, textarea {
-      background: #020617;
-      color: #e5e7eb;
-      border: 1px solid #1e293b;
-    }
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 20px;
+  color: #94a3b8;
+}
 
-    button {
-      background: #38bdf8;
-      color: #020617;
-      cursor: pointer;
-      font-weight: bold;
-    }
+/* WHATSAPP */
+.whatsapp {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #25d366;
+  color: white;
+  padding: 14px 20px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: bold;
+  animation: pulse 2s infinite;
+}
 
-    footer {
-      text-align: center;
-      padding: 20px;
-      background: #020617;
-      color: #94a3b8;
-    }
-
-    /* WHATSAPP BUTTON */
-    .whatsapp-btn {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background: #25d366;
-      color: white;
-      padding: 15px 20px;
-      border-radius: 50px;
-      text-decoration: none;
-      font-weight: bold;
-      box-shadow: 0 0 0 rgba(37, 211, 102, 0.7);
-      animation: pulse 2s infinite;
-      z-index: 999;
-    }
-
-    @keyframes pulse {
-      0% { box-shadow: 0 0 0 0 rgba(37,211,102,0.7); }
-      70% { box-shadow: 0 0 0 15px rgba(37,211,102,0); }
-      100% { box-shadow: 0 0 0 0 rgba(37,211,102,0); }
-    }
-  </style>
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 rgba(37,211,102,0.6); }
+  70% { box-shadow: 0 0 0 18px rgba(37,211,102,0); }
+  100% { box-shadow: 0 0 0 0 rgba(37,211,102,0); }
+}
+</style>
 </head>
 
 <body>
 
-<header>
-  <img src="logo.png" alt="RM Mechalabs Logo" />
-  <h1>RM Mechalabs</h1>
-  <p>Mechanical Design & Automation Solutions</p>
-</header>
-
-<section class="profile">
-  <h2>Company Profile</h2>
-  <p>
-    RM Mechalabs is an engineering company specializing in
-    <strong>machine automation, mechanical design, AutoCAD drafting,
-    fabrication support, and engineering consultation</strong>.
-    We deliver innovative, reliable, and cost-effective engineering solutions.
-  </p>
-
-  <div class="founder-box">
-    <h3>Founder & CEO</h3>
-    <p><strong>Mark Rubui</strong></p>
-    <p>Mechanical Engineer & Automation Specialist</p>
+<!-- HEADER -->
+<div class="header container">
+  <img src="logo.png" alt="RM Mechalabs Logo">
+  <div>
+    <h1>RM MECHALABS</h1>
+    <p>Mechanical Design | Automation | Engineering Consultancy</p>
   </div>
-</section>
+</div>
 
-<section>
-  <h2>Our Services</h2>
-  <div class="services">
-    <div class="service-card">Mechanical Design</div>
-    <div class="service-card">Machine Automation</div>
-    <div class="service-card">AutoCAD Drafting</div>
-    <div class="service-card">Engineering Consultation</div>
-  </div>
-</section>
+<div class="container">
 
-<section>
-  <h2>Request a Service</h2>
-  <form>
-    <input type="text" placeholder="Your Name" required />
-    <input type="email" placeholder="Email Address" required />
-    <textarea rows="5" placeholder="Describe your project" required></textarea>
-    <button type="submit">Submit Request</button>
-  </form>
-</section>
+<div class="card">
+<h2>Company Overview</h2>
+<p>
+RM Mechalabs is an engineering solutions company specializing in mechanical
+design, machine automation, engineering consultation, and AutoCAD drafting.
+</p>
+</div>
+
+<div class="grid-2">
+<div class="card">
+<h2>Core Services</h2>
+<ul>
+<li>Machine Automation</li>
+<li>Mechanical System Design</li>
+<li>Engineering Consultation</li>
+<li>AutoCAD Technical Drawings</li>
+</ul>
+</div>
+
+<div class="card">
+<h2>Vision</h2>
+<p>To be a trusted engineering solutions provider driven by innovation.</p>
+</div>
+</div>
+
+<div class="card">
+<h2>Mission</h2>
+<p>To deliver practical, efficient, and affordable engineering solutions.</p>
+</div>
+
+<div class="card founder">
+<img src="logo.png" width="90">
+<div>
+<h2>Mark Rubui</h2>
+<p><strong>Founder & CEO</strong></p>
+<p>Mechanical Engineer</p>
+<p>📞 +254 798 470 854</p>
+</div>
+</div>
+
+<!-- JOB CARD -->
+<div class="card">
+<h2>Service Request / Job Card</h2>
+<form action="mailto:info@rmmechalabs.com" method="post" enctype="text/plain">
+<input type="text" name="Name" placeholder="Your Name" required>
+<input type="tel" name="Phone" placeholder="Phone Number" required>
+<input type="email" name="Email" placeholder="Email">
+<select name="Service">
+<option>Machine Automation</option>
+<option>Mechanical Design</option>
+<option>Engineering Consultation</option>
+<option>AutoCAD Drafting</option>
+</select>
+<textarea name="Job Details" rows="4" placeholder="Describe your job..."></textarea>
+<button type="submit">Submit Request</button>
+</form>
+</div>
+
+</div>
 
 <footer>
-  © 2026 RM Mechalabs | Engineering Excellence
+© 2026 RM Mechalabs | Founded by Mark Rubui
 </footer>
 
 <!-- WHATSAPP BUTTON -->
-<a
-  class="whatsapp-btn"
-  href="https://wa.me/254798470854?text=Hello%20RM%20Mechalabs,%20I%20would%20like%20to%20request%20your%20services."
-  target="_blank">
-  WhatsApp Us
+<a class="whatsapp"
+href="https://wa.me/254798470854?text=Hello%20RM%20Mechalabs,%20I%20would%20like%20to%20inquire%20about%20your%20engineering%20services."
+target="_blank">
+WhatsApp
 </a>
+
+<script>
+const cards = document.querySelectorAll(".card");
+window.addEventListener("scroll", () => {
+  cards.forEach(card => {
+    const pos = card.getBoundingClientRect().top;
+    if (pos < window.innerHeight - 100) {
+      card.classList.add("show");
+    }
+  });
+});
+</script>
 
 </body>
 </html>
