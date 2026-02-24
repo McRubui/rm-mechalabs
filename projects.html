@@ -1,107 +1,292 @@
-<section class="section" id="projects">
-<h2>Featured Project Case Study</h2>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Projects | RM Mechalabs</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+/* GLOBAL */
+body{
+margin:0;
+font-family:'Inter',sans-serif;
+background:linear-gradient(135deg,#050a14,#0b1220);
+color:#e6edf3;
+overflow-x:hidden;
+}
+
+.section{
+padding:100px 10%;
+}
+
+h2{
+text-align:center;
+margin-bottom:60px;
+font-size:36px;
+letter-spacing:1px;
+}
+
+/* GLASS CARD */
+.card{
+background:rgba(255,255,255,0.05);
+backdrop-filter:blur(15px);
+border:1px solid rgba(255,255,255,0.08);
+padding:40px;
+border-radius:20px;
+box-shadow:0 20px 60px rgba(0,0,0,0.5);
+transition:0.4s ease;
+}
+
+.card:hover{
+transform:translateY(-10px);
+box-shadow:0 30px 80px rgba(0,195,255,0.2);
+}
+
+/* GRID */
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:30px;
+}
+
+/* METRICS */
+.metrics{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:40px;
+text-align:center;
+}
+
+.metric h3{
+font-size:60px;
+color:#00c3ff;
+margin-bottom:10px;
+}
+
+/* BUTTON */
+.btn{
+display:inline-block;
+padding:14px 28px;
+background:#00c3ff;
+color:#000;
+border-radius:8px;
+text-decoration:none;
+font-weight:600;
+transition:.3s;
+}
+
+.btn:hover{
+background:#00e0ff;
+}
+
+/* DRAWINGS */
+.blueprint{
+background:#07111f;
+border:1px solid #00c3ff33;
+border-radius:12px;
+padding:20px;
+}
+
+.blueprint img{
+width:100%;
+border-radius:10px;
+filter:brightness(.8) contrast(1.2);
+}
+
+/* SCROLL REVEAL */
+.reveal{
+opacity:0;
+transform:translateY(40px);
+transition:all 1s ease;
+}
+
+.reveal.active{
+opacity:1;
+transform:translateY(0);
+}
+
+/* FOOTER */
+footer{
+text-align:center;
+padding:60px 10%;
+background:#03070f;
+border-top:1px solid rgba(255,255,255,0.05);
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- ================= CASE STUDY ================= -->
+
+<section class="section reveal">
+
+<h2>Enterprise Automation Case Study</h2>
 
 <div class="card">
 
 <h3>Smart Conveyor Sorting & Automation System</h3>
 
-<p><strong>Client Type:</strong> Small-Scale Manufacturing Facility</p>
+<p><strong>Client Type:</strong> Manufacturing Facility</p>
 <p><strong>Industry:</strong> FMCG Production</p>
 
-<hr style="margin:25px 0;opacity:.2">
-
-<h4>Project Visual Overview</h4>
-
-<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px;margin:20px 0;">
-<img src="https://picsum.photos/600/400?conveyor" style="width:100%;border-radius:10px;">
-<img src="https://picsum.photos/600/400?factory" style="width:100%;border-radius:10px;">
-</div>
-
-<hr style="margin:25px 0;opacity:.2">
+<br>
 
 <h4>Problem</h4>
-<p>
-Manual product sorting caused bottlenecks, inconsistent classification, and high labor dependency during high production cycles.
-</p>
+<p>Manual sorting created bottlenecks, labor dependency, and inconsistent classification during peak production cycles.</p>
 
-<h4>Solution Delivered</h4>
+<br>
+
+<h4>Solution Engineered</h4>
 <ul>
-<li>Custom mechanical conveyor frame (CAD designed)</li>
-<li>Sensor-based real-time detection system</li>
-<li>PLC-controlled automated sorting gates</li>
-<li>Modular scalability architecture</li>
+<li>Precision CAD-designed mechanical conveyor frame</li>
+<li>Industrial-grade sensor detection system</li>
+<li>PLC automated sorting logic</li>
+<li>Modular scalable architecture</li>
 </ul>
 
-<hr style="margin:25px 0;opacity:.2">
+<br>
 
-<h4>Before vs After Performance</h4>
-
-<div style="display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:20px;">
-
-<div style="background:#0b1220;padding:20px;border-radius:10px;">
-<h5>Before Implementation</h5>
+<h4>Performance Impact</h4>
 <ul>
-<li>Manual sorting</li>
-<li>High labor cost</li>
-<li>Sorting inconsistencies</li>
-<li>Production bottlenecks</li>
-</ul>
-</div>
-
-<div style="background:#0b1220;padding:20px;border-radius:10px;">
-<h5>After Implementation</h5>
-<ul>
-<li>Automated product classification</li>
 <li>↓ 40% labor dependency</li>
 <li>↑ 32% throughput increase</li>
-<li>Consistent product flow</li>
-</ul>
-</div>
-
-</div>
-
-<hr style="margin:25px 0;opacity:.2">
-
-<h4>ROI & Business Impact</h4>
-
-<p>
-Estimated automation cost recovery achieved within <strong>8–12 months</strong> due to labor reduction and throughput improvement.
-</p>
-
-<ul>
-<li>Operational cost savings annually</li>
-<li>Scalable infrastructure for expansion</li>
-<li>Improved production reliability</li>
-<li>Reduced human error margin</li>
+<li>8–12 month ROI recovery</li>
 </ul>
 
-<hr style="margin:25px 0;opacity:.2">
-
-<h4>Download Full Technical Case Study</h4>
-
-<a href="case-study.pdf" class="btn" download>Download PDF</a>
-
 </div>
+
 </section>
-<section class="section">
+
+<!-- ================= ENGINEERING DRAWINGS ================= -->
+
+<section class="section reveal">
+
+<h2>Engineering Drawings & Technical Schematics</h2>
+
+<div class="grid">
+
+<div class="blueprint">
+<img src="https://picsum.photos/800/500?blueprint" alt="Mechanical CAD Drawing">
+<p>Mechanical CAD Layout Blueprint</p>
+</div>
+
+<div class="blueprint">
+<img src="https://picsum.photos/800/500?technical" alt="Automation Schematic">
+<p>Automation Control Schematic</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= METRICS ================= -->
+
+<section class="section reveal">
 
 <h2>Performance & Capability Metrics</h2>
 
 <div class="metrics">
+
 <div class="metric">
 <h3 id="counter1">0</h3>
-<p>Automation Efficiency Improvement %</p>
+<p>Efficiency Improvement %</p>
 </div>
 
 <div class="metric">
 <h3 id="counter2">0</h3>
-<p>Average Labor Reduction %</p>
+<p>Labor Reduction %</p>
 </div>
 
 <div class="metric">
 <h3 id="counter3">0</h3>
 <p>System Scalability Index</p>
 </div>
+
 </div>
 
 </section>
+
+<!-- ================= PROCESS ================= -->
+
+<section class="section reveal">
+
+<h2>Engineering Methodology</h2>
+
+<div class="grid">
+
+<div class="card">
+<h3>1. System Audit</h3>
+<p>Industrial diagnostics & workflow mapping.</p>
+</div>
+
+<div class="card">
+<h3>2. CAD & Simulation</h3>
+<p>Mechanical modeling and stress simulation validation.</p>
+</div>
+
+<div class="card">
+<h3>3. Implementation</h3>
+<p>Fabrication, PLC integration & system calibration.</p>
+</div>
+
+<div class="card">
+<h3>4. Optimization</h3>
+<p>Throughput tuning & operational efficiency scaling.</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+<p>© 2026 RM Mechalabs | Industrial Automation & Mechanical Engineering</p>
+<p>Contact: rmmechalabs@hotmail.com</p>
+</footer>
+
+<script>
+
+/* COUNTER ANIMATION ON SCROLL */
+function animateCounter(id, target){
+let count = 0;
+let interval = setInterval(()=>{
+count++;
+document.getElementById(id).innerText = count;
+if(count >= target) clearInterval(interval);
+},20);
+}
+
+/* SCROLL REVEAL */
+function revealOnScroll(){
+const reveals = document.querySelectorAll('.reveal');
+for(let i=0;i<reveals.length;i++){
+let windowHeight = window.innerHeight;
+let elementTop = reveals[i].getBoundingClientRect().top;
+if(elementTop < windowHeight - 100){
+reveals[i].classList.add('active');
+}
+}
+}
+
+window.addEventListener('scroll', revealOnScroll);
+
+/* Trigger counters when metrics visible */
+window.addEventListener('scroll', function(){
+let metricsSection = document.querySelector('.metrics');
+if(metricsSection.getBoundingClientRect().top < window.innerHeight){
+animateCounter("counter1",32);
+animateCounter("counter2",40);
+animateCounter("counter3",100);
+}
+});
+
+</script>
+
+</body>
+</html>
