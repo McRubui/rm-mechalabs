@@ -3,165 +3,117 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>RM Mechalabs | Engineering & Automation Solutions</title>
 
-<meta name="description" content="RM Mechalabs delivers mechanical engineering, automation systems and industrial consultancy solutions across manufacturing and production sectors.">
+<title>RM Mechalabs | Industrial Automation & Mechanical Engineering</title>
+<meta name="description" content="RM Mechalabs provides advanced mechanical engineering, automation systems, industrial optimization and consultancy solutions across manufacturing sectors.">
+
+<!-- SEO STRUCTURED DATA -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "EngineeringCompany",
+  "name": "RM Mechalabs",
+  "url": "https://rm-mechalabs.vercel.app",
+  "founder": {
+    "@type": "Person",
+    "name": "Mark Rubui"
+  },
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": "+254798470854",
+    "contactType": "customer service"
+  }
+}
+</script>
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700;900&display=swap" rel="stylesheet">
 
 <style>
-
+html{scroll-behavior:smooth}
 *{margin:0;padding:0;box-sizing:border-box}
-body{
-font-family:'Inter',sans-serif;
-background:#050b18;
-color:#e5e7eb;
-line-height:1.6;
-}
+body{font-family:'Inter',sans-serif;background:#050b18;color:#e5e7eb;line-height:1.6;overflow-x:hidden}
 
-header{
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:20px 8%;
-background:rgba(5,11,24,.85);
-backdrop-filter:blur(12px);
+/* LOADER */
+#loader{
 position:fixed;
 width:100%;
-z-index:999;
+height:100%;
+background:#050b18;
+display:flex;
+align-items:center;
+justify-content:center;
+z-index:9999;
+font-size:22px;
+font-weight:700;
 }
+.hidden{opacity:0;pointer-events:none;transition:1s}
 
-header h2{font-weight:700}
-
-nav a{
-color:#cbd5e1;
-margin-left:25px;
-text-decoration:none;
-font-weight:500;
+/* HEADER */
+header{
+display:flex;justify-content:space-between;align-items:center;
+padding:20px 8%;background:rgba(5,11,24,.9);
+position:fixed;width:100%;z-index:999;
+backdrop-filter:blur(12px)
 }
+nav a{color:#cbd5e1;margin-left:25px;text-decoration:none;font-weight:500}
 nav a:hover{color:#3b82f6}
 
+/* HERO */
 .hero{
-height:100vh;
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
-text-align:center;
-padding:0 20px;
+height:100vh;display:flex;flex-direction:column;
+justify-content:center;align-items:center;text-align:center;
 background:radial-gradient(circle at center,#0f172a,#050b18);
+padding:0 20px
 }
-
-.hero h1{
-font-size:52px;
-font-weight:900;
-max-width:900px;
-}
-
-.hero p{
-margin-top:20px;
-color:#94a3b8;
-font-size:20px;
-max-width:650px;
-}
-
+.hero h1{font-size:52px;font-weight:900;max-width:900px}
+.hero p{margin-top:20px;color:#94a3b8;font-size:20px;max-width:650px}
 .btn{
-margin-top:35px;
-background:#3b82f6;
-color:white;
-padding:16px 32px;
-border-radius:8px;
-text-decoration:none;
-font-weight:600;
-transition:.3s;
+margin-top:35px;background:#3b82f6;color:white;
+padding:16px 32px;border-radius:8px;text-decoration:none;
+font-weight:600;transition:.3s
 }
 .btn:hover{transform:scale(1.05)}
 
-.section{
-padding:100px 8%;
-}
-
-.section h2{
-font-size:34px;
-margin-bottom:50px;
-}
+.section{padding:100px 8%}
+.section h2{font-size:34px;margin-bottom:50px}
 
 .grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-gap:30px;
+display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:30px
 }
-
 .card{
-background:#0f172a;
-padding:30px;
-border-radius:14px;
-transition:.4s;
+background:#0f172a;padding:30px;border-radius:14px;
+transition:.4s;opacity:0;transform:translateY(40px)
 }
-.card:hover{
-transform:translateY(-10px);
-box-shadow:0 20px 50px rgba(0,0,0,.6);
-}
+.card.visible{opacity:1;transform:translateY(0)}
+.card:hover{transform:translateY(-10px)}
 
 .metrics{
-display:flex;
-justify-content:space-around;
-text-align:center;
-margin-top:40px;
-flex-wrap:wrap;
-gap:40px;
+display:flex;justify-content:space-around;text-align:center;
+margin-top:40px;flex-wrap:wrap;gap:40px
 }
+.metric h3{font-size:38px;color:#3b82f6}
 
-.metric h3{
-font-size:38px;
-color:#3b82f6;
+/* PROJECTS */
+.project{
+background:#0f172a;padding:40px;border-radius:16px;
+margin-bottom:40px;opacity:0;transform:translateY(40px)
 }
+.project.visible{opacity:1;transform:translateY(0)}
 
-.founder{
-display:flex;
-gap:50px;
-align-items:center;
-flex-wrap:wrap;
-}
-
-.founder img{
-width:250px;
-border-radius:14px;
-}
-
-.cta{
-text-align:center;
-background:#0f172a;
-padding:80px 20px;
-}
-
-footer{
-text-align:center;
-padding:50px;
-color:#64748b;
-background:#020617;
-}
-
+/* FOOTER */
+footer{text-align:center;padding:50px;color:#64748b;background:#020617}
 .whatsapp{
-position:fixed;
-right:20px;
-bottom:20px;
-background:#25D366;
-color:white;
-padding:16px 22px;
-border-radius:50px;
-font-weight:700;
-text-decoration:none;
+position:fixed;right:20px;bottom:20px;background:#25D366;
+color:white;padding:16px 22px;border-radius:50px;
+font-weight:700;text-decoration:none
 }
-
-@media(max-width:768px){
-.hero h1{font-size:36px}
-}
-
 </style>
 </head>
 
 <body>
+
+<div id="loader">RM Mechalabs Loading...</div>
 
 <header>
 <h2>RM Mechalabs</h2>
@@ -182,34 +134,36 @@ text-decoration:none;
 <section class="section" id="services">
 <h2>Core Capabilities</h2>
 <div class="grid">
-<div class="card"><h3>Industrial Automation</h3><p>Smart automation systems designed for production efficiency.</p></div>
-<div class="card"><h3>Mechanical Design</h3><p>High-performance CAD engineering & system architecture.</p></div>
-<div class="card"><h3>Engineering Consultancy</h3><p>Strategic technical guidance for industrial growth.</p></div>
+<div class="card"><h3>Industrial Automation</h3><p>Smart PLC-integrated automation systems.</p></div>
+<div class="card"><h3>Mechanical Design</h3><p>Advanced CAD & system optimization.</p></div>
+<div class="card"><h3>Engineering Consultancy</h3><p>Scalable industrial performance strategies.</p></div>
 </div>
 </section>
 
 <section class="section">
 <h2>Performance Metrics</h2>
 <div class="metrics">
-<div class="metric"><h3>100%</h3><p>Commitment to Quality</p></div>
-<div class="metric"><h3>24hr</h3><p>Response Time</p></div>
-<div class="metric"><h3>∞</h3><p>Innovation Mindset</p></div>
+<div class="metric"><h3 id="c1">0</h3><p>Projects Delivered</p></div>
+<div class="metric"><h3 id="c2">0</h3><p>Industrial Clients</p></div>
+<div class="metric"><h3 id="c3">0</h3><p>System Efficiency %</p></div>
 </div>
 </section>
 
-<section class="section founder">
-<img src="logo.png">
-<div>
-<h2>Founder & CEO</h2>
-<h3>Mark Rubui</h3>
-<p>Mechanical Engineer and founder of RM Mechalabs, focused on building scalable engineering systems and automation solutions across industrial sectors.</p>
+<section class="section" id="projects">
+<h2>Featured Engineering Project</h2>
+
+<div class="project">
+<h3>Automated Packaging Conveyor System</h3>
+<p><strong>Problem:</strong> Manual packaging line causing 28% production delay.</p>
+<p><strong>Solution:</strong> Designed PLC-controlled conveyor system with synchronized motor control.</p>
+<p><strong>Impact:</strong> Increased throughput by 42% and reduced labor cost by 30%.</p>
 </div>
+
 </section>
 
-<section class="cta" id="investors">
-<h2>Strategic Partnerships & Investment</h2>
-<p>We are open to strategic collaborations and investment partnerships to scale advanced engineering solutions.</p>
-<a href="mailto:rmmechalabs@hotmail.com" class="btn">Contact Founder</a>
+<section class="section" id="investors">
+<h2>Strategic Partnerships</h2>
+<p>Open to collaboration and industrial investment partnerships.</p>
 </section>
 
 <section class="section" id="contact">
@@ -224,6 +178,49 @@ text-decoration:none;
 </footer>
 
 <a class="whatsapp" href="https://wa.me/254798470854?text=Hello%20RM%20Mechalabs">WhatsApp</a>
+
+<script>
+
+/* LOADER */
+window.addEventListener("load",()=>{
+document.getElementById("loader").classList.add("hidden")
+})
+
+/* SCROLL REVEAL */
+function reveal(){
+document.querySelectorAll('.card,.project').forEach(el=>{
+if(el.getBoundingClientRect().top < window.innerHeight - 100){
+el.classList.add('visible')
+}
+})
+}
+window.addEventListener("scroll",reveal)
+reveal()
+
+/* COUNTERS */
+let started=false
+function counter(id,target){
+let el=document.getElementById(id)
+let count=0
+let step=Math.ceil(target/100)
+let interval=setInterval(()=>{
+count+=step
+if(count>=target){el.innerText=target;clearInterval(interval)}
+else{el.innerText=count}
+},20)
+}
+window.addEventListener("scroll",()=>{
+if(started) return
+let pos=document.querySelector(".metrics").getBoundingClientRect().top
+if(pos < window.innerHeight -100){
+started=true
+counter("c1",32)
+counter("c2",18)
+counter("c3",97)
+}
+})
+
+</script>
 
 </body>
 </html>
