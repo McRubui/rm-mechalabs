@@ -14,3 +14,17 @@ let price=(c*50)+(h*20);
 document.getElementById("result").innerHTML=
 "Estimated Cost: $"+price;
 }
+function animateCounter(id, target){
+let count = 0;
+let interval = setInterval(()=>{
+count++;
+document.getElementById(id).innerText = count;
+if(count >= target) clearInterval(interval);
+},20);
+}
+
+window.onload = function(){
+animateCounter("counter1",32);
+animateCounter("counter2",40);
+animateCounter("counter3",100);
+};
