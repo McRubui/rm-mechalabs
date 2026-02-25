@@ -3,57 +3,332 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>RM Mechalabs | Engineering Innovation</title>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700;900&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+<title>RM Mechalabs</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+
+<style>
+
+/* ===========================
+   GLOBAL
+=========================== */
+
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+font-family:'Inter',sans-serif;
+background:#061726;
+color:#cbd5e1;
+overflow-x:hidden;
+}
+
+/* NAVBAR */
+nav{
+position:fixed;
+top:0;
+width:100%;
+background:#081f36;
+padding:18px 8%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+z-index:1000;
+border-bottom:1px solid rgba(255,255,255,0.05);
+}
+
+.logo{
+display:flex;
+align-items:center;
+gap:10px;
+font-weight:700;
+color:white;
+}
+
+.logo img{
+width:38px;
+}
+
+.nav-links a{
+margin:0 15px;
+color:#cbd5e1;
+text-decoration:none;
+font-weight:500;
+}
+
+.nav-links a:hover{
+color:#38bdf8;
+}
+
+.quote-btn{
+background:linear-gradient(90deg,#3b82f6,#06b6d4);
+padding:10px 18px;
+border-radius:8px;
+color:white;
+font-weight:600;
+}
+
+/* HERO */
+.hero{
+height:100vh;
+display:flex;
+flex-direction:column;
+align-items:center;
+justify-content:center;
+text-align:center;
+padding:0 10%;
+background:radial-gradient(circle at center,#0f2f52 0%,#061726 70%);
+}
+
+.badge{
+background:#0f2f52;
+padding:8px 18px;
+border-radius:20px;
+color:#38bdf8;
+margin-bottom:20px;
+font-size:14px;
+}
+
+.hero h1{
+font-size:48px;
+color:white;
+}
+
+.hero h1 span{
+color:#38bdf8;
+}
+
+.hero p{
+max-width:600px;
+margin:20px auto;
+color:#94a3b8;
+}
+
+.hero-buttons{
+margin-top:20px;
+}
+
+.hero-buttons a{
+padding:12px 25px;
+border-radius:8px;
+text-decoration:none;
+margin:5px;
+font-weight:600;
+}
+
+.primary-btn{
+background:linear-gradient(90deg,#3b82f6,#06b6d4);
+color:white;
+}
+
+.secondary-btn{
+border:1px solid #38bdf8;
+color:#38bdf8;
+}
+
+/* RM CIRCLE */
+.rm-circle{
+margin-top:50px;
+width:260px;
+height:260px;
+border-radius:50%;
+border:2px solid #1e3a5f;
+display:flex;
+align-items:center;
+justify-content:center;
+color:#38bdf8;
+font-size:48px;
+font-weight:800;
+box-shadow:0 0 60px rgba(56,189,248,0.3);
+}
+
+/* SECTION */
+.section{
+padding:100px 8%;
+}
+
+.section-title{
+text-align:center;
+font-size:34px;
+color:white;
+margin-bottom:50px;
+}
+
+/* CARD STYLE */
+.card{
+background:#0b253f;
+padding:30px;
+border-radius:16px;
+border:1px solid rgba(255,255,255,0.05);
+margin-bottom:25px;
+}
+
+.card h3{
+color:white;
+margin-bottom:10px;
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:30px;
+}
+
+/* CONTACT BOXES */
+.contact-box{
+background:#0b253f;
+padding:25px;
+border-radius:14px;
+margin-bottom:20px;
+border:1px solid rgba(255,255,255,0.05);
+}
+
+/* FORM */
+input,textarea{
+width:100%;
+padding:14px;
+margin:10px 0;
+background:#061726;
+border:1px solid rgba(255,255,255,0.1);
+border-radius:8px;
+color:white;
+}
+
+button{
+width:100%;
+padding:14px;
+border:none;
+border-radius:8px;
+background:linear-gradient(90deg,#3b82f6,#06b6d4);
+color:white;
+font-weight:600;
+margin-top:10px;
+}
+
+/* FOOTER */
+footer{
+background:#04121e;
+padding:60px 8%;
+margin-top:60px;
+color:#94a3b8;
+}
+
+.footer-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:30px;
+}
+
+footer h4{
+color:white;
+margin-bottom:15px;
+}
+
+@media(max-width:768px){
+.hero h1{font-size:34px}
+}
+
+</style>
 </head>
 <body>
 
+<!-- NAV -->
 <nav>
-<div class="container nav-wrapper">
-<div class="logo">RM MECHALABS</div>
-<div class="nav-links">
-<a href="index.html">Home</a>
-<a href="about.html">About</a>
-<a href="services.html">Services</a>
-<a href="contact.html">Contact</a>
+<div class="logo">
+<img src="your-logo.png">
+RM MECHALABS
 </div>
+<div class="nav-links">
+<a href="#home">Home</a>
+<a href="#services">Services</a>
+<a href="#vision">About</a>
+<a href="#contact">Contact</a>
+<a href="#contact" class="quote-btn">Get Quote</a>
 </div>
 </nav>
 
-<section class="hero">
-<div class="container">
-<h1>Engineering the <span>Future</span></h1>
-<p>Mechanical Design, Automation & Engineering Consultancy delivering precision-driven industrial solutions.</p>
-<a href="services.html" class="btn btn-primary">Explore Services</a>
+<!-- HERO -->
+<section class="hero" id="home">
+<div class="badge">Engineering Excellence</div>
+<h1>RM <span>MECHALABS</span></h1>
+<p>Mechanical Design | Automation | Engineering Consultancy delivering precision solutions across industries.</p>
+
+<div class="hero-buttons">
+<a href="#services" class="primary-btn">Our Services</a>
+<a href="#contact" class="secondary-btn">Contact Us</a>
 </div>
+
+<div class="rm-circle">RM</div>
 </section>
 
-<section class="section">
-<div class="container">
+<!-- SERVICES -->
+<section class="section" id="services">
 <h2 class="section-title">Core Services</h2>
-
 <div class="grid">
 <div class="card">
 <h3>Machine Automation</h3>
-<p>Custom automation systems engineered for performance and operational efficiency.</p>
+<p>Custom automation systems engineered for enhanced productivity and efficiency.</p>
 </div>
-
 <div class="card">
-<h3>Engineering Consultancy</h3>
-<p>Strategic engineering advisory and technical project guidance.</p>
+<h3>Engineering Project Consultation</h3>
+<p>Comprehensive consultation from planning to execution.</p>
 </div>
-
 <div class="card">
-<h3>Technical Design</h3>
-<p>Precision CAD modeling and detailed manufacturing documentation.</p>
-</div>
+<h3>AutoCAD & Technical Design</h3>
+<p>Precision engineering drawings and technical documentation.</p>
 </div>
 </div>
 </section>
 
+<!-- VISION -->
+<section class="section" id="vision">
+<h2 class="section-title">Vision & Mission</h2>
+<div class="grid">
+<div class="card">
+<h3>Vision</h3>
+<p>To be a leading engineering solutions provider recognized for excellence and innovation.</p>
+</div>
+<div class="card">
+<h3>Mission</h3>
+<p>Deliver precision, affordable and scalable engineering solutions tailored to each client.</p>
+</div>
+</div>
+</section>
+
+<!-- CONTACT -->
+<section class="section" id="contact">
+<h2 class="section-title">Get In Touch</h2>
+
+<div class="contact-box">
+<strong>Phone:</strong> +254 798 470 854
+</div>
+<div class="contact-box">
+<strong>Email:</strong> rmmechalabs@hotmail.com
+</div>
+
+<div class="card">
+<h3>Send us a Message</h3>
+<input placeholder="Your Name">
+<input placeholder="Email">
+<textarea rows="4" placeholder="Your Message"></textarea>
+<button>Send Message</button>
+</div>
+
+</section>
+
 <footer>
-© 2026 RM Mechalabs. All rights reserved.
+<div class="footer-grid">
+<div>
+<h4>RM MECHALABS</h4>
+<p>Premier engineering solutions provider specializing in automation and mechanical design.</p>
+</div>
+<div>
+<h4>Quick Links</h4>
+<p>Home</p>
+<p>Services</p>
+<p>About</p>
+<p>Contact</p>
+</div>
+</div>
 </footer>
 
 </body>
