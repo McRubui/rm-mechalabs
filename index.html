@@ -3,224 +3,58 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>RM Mechalabs | Industrial Automation & Mechanical Engineering</title>
-<meta name="description" content="RM Mechalabs provides advanced mechanical engineering, automation systems, industrial optimization and consultancy solutions across manufacturing sectors.">
-
-<!-- SEO STRUCTURED DATA -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "EngineeringCompany",
-  "name": "RM Mechalabs",
-  "url": "https://rm-mechalabs.vercel.app",
-  "founder": {
-    "@type": "Person",
-    "name": "Mark Rubui"
-  },
-  "contactPoint": {
-    "@type": "ContactPoint",
-    "telephone": "+254798470854",
-    "contactType": "customer service"
-  }
-}
-</script>
-
+<title>RM Mechalabs | Engineering Innovation</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700;900&display=swap" rel="stylesheet">
-
-<style>
-html{scroll-behavior:smooth}
-*{margin:0;padding:0;box-sizing:border-box}
-body{font-family:'Inter',sans-serif;background:#050b18;color:#e5e7eb;line-height:1.6;overflow-x:hidden}
-
-/* LOADER */
-#loader{
-position:fixed;
-width:100%;
-height:100%;
-background:#050b18;
-display:flex;
-align-items:center;
-justify-content:center;
-z-index:9999;
-font-size:22px;
-font-weight:700;
-}
-.hidden{opacity:0;pointer-events:none;transition:1s}
-
-/* HEADER */
-header{
-display:flex;justify-content:space-between;align-items:center;
-padding:20px 8%;background:rgba(5,11,24,.9);
-position:fixed;width:100%;z-index:999;
-backdrop-filter:blur(12px)
-}
-nav a{color:#cbd5e1;margin-left:25px;text-decoration:none;font-weight:500}
-nav a:hover{color:#3b82f6}
-
-/* HERO */
-.hero{
-height:100vh;display:flex;flex-direction:column;
-justify-content:center;align-items:center;text-align:center;
-background:radial-gradient(circle at center,#0f172a,#050b18);
-padding:0 20px
-}
-.hero h1{font-size:52px;font-weight:900;max-width:900px}
-.hero p{margin-top:20px;color:#94a3b8;font-size:20px;max-width:650px}
-.btn{
-margin-top:35px;background:#3b82f6;color:white;
-padding:16px 32px;border-radius:8px;text-decoration:none;
-font-weight:600;transition:.3s
-}
-.btn:hover{transform:scale(1.05)}
-
-.section{padding:100px 8%}
-.section h2{font-size:34px;margin-bottom:50px}
-
-.grid{
-display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-gap:30px
-}
-.card{
-background:#0f172a;padding:30px;border-radius:14px;
-transition:.4s;opacity:0;transform:translateY(40px)
-}
-.card.visible{opacity:1;transform:translateY(0)}
-.card:hover{transform:translateY(-10px)}
-
-.metrics{
-display:flex;justify-content:space-around;text-align:center;
-margin-top:40px;flex-wrap:wrap;gap:40px
-}
-.metric h3{font-size:38px;color:#3b82f6}
-
-/* PROJECTS */
-.project{
-background:#0f172a;padding:40px;border-radius:16px;
-margin-bottom:40px;opacity:0;transform:translateY(40px)
-}
-.project.visible{opacity:1;transform:translateY(0)}
-
-/* FOOTER */
-footer{text-align:center;padding:50px;color:#64748b;background:#020617}
-.whatsapp{
-position:fixed;right:20px;bottom:20px;background:#25D366;
-color:white;padding:16px 22px;border-radius:50px;
-font-weight:700;text-decoration:none
-}
-</style>
+<link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-<div id="loader">RM Mechalabs Loading...</div>
-
-<header>
-<h2>RM Mechalabs</h2>
 <nav>
-<a href="#services">Services</a>
-<a href="#projects">Projects</a>
-<a href="#investors">Investors</a>
-<a href="#contact">Contact</a>
+<div class="container nav-wrapper">
+<div class="logo">RM MECHALABS</div>
+<div class="nav-links">
+<a href="index.html">Home</a>
+<a href="about.html">About</a>
+<a href="services.html">Services</a>
+<a href="contact.html">Contact</a>
+</div>
+</div>
 </nav>
-</header>
 
 <section class="hero">
-<h1>Engineering Automation & Mechanical Innovation For Modern Industry</h1>
-<p>We design, optimize and automate mechanical systems that drive industrial performance and operational efficiency.</p>
-<a href="#contact" class="btn">Request Consultation</a>
-</section>
-
-<section class="section" id="services">
-<h2>Core Capabilities</h2>
-<div class="grid">
-<div class="card"><h3>Industrial Automation</h3><p>Smart PLC-integrated automation systems.</p></div>
-<div class="card"><h3>Mechanical Design</h3><p>Advanced CAD & system optimization.</p></div>
-<div class="card"><h3>Engineering Consultancy</h3><p>Scalable industrial performance strategies.</p></div>
+<div class="container">
+<h1>Engineering the <span>Future</span></h1>
+<p>Mechanical Design, Automation & Engineering Consultancy delivering precision-driven industrial solutions.</p>
+<a href="services.html" class="btn btn-primary">Explore Services</a>
 </div>
 </section>
 
 <section class="section">
-<h2>Performance Metrics</h2>
-<div class="metrics">
-<div class="metric"><h3 id="c1">0</h3><p>Projects Delivered</p></div>
-<div class="metric"><h3 id="c2">0</h3><p>Industrial Clients</p></div>
-<div class="metric"><h3 id="c3">0</h3><p>System Efficiency %</p></div>
-</div>
-</section>
+<div class="container">
+<h2 class="section-title">Core Services</h2>
 
-<section class="section" id="projects">
-<h2>Featured Engineering Project</h2>
-
-<div class="project">
-<h3>Automated Packaging Conveyor System</h3>
-<p><strong>Problem:</strong> Manual packaging line causing 28% production delay.</p>
-<p><strong>Solution:</strong> Designed PLC-controlled conveyor system with synchronized motor control.</p>
-<p><strong>Impact:</strong> Increased throughput by 42% and reduced labor cost by 30%.</p>
+<div class="grid">
+<div class="card">
+<h3>Machine Automation</h3>
+<p>Custom automation systems engineered for performance and operational efficiency.</p>
 </div>
 
-</section>
+<div class="card">
+<h3>Engineering Consultancy</h3>
+<p>Strategic engineering advisory and technical project guidance.</p>
+</div>
 
-<section class="section" id="investors">
-<h2>Strategic Partnerships</h2>
-<p>Open to collaboration and industrial investment partnerships.</p>
-</section>
-
-<section class="section" id="contact">
-<h2>Contact</h2>
-<p>📞 +254 798 470 854</p>
-<p>✉ rmmechalabs@hotmail.com</p>
-<p>🌍 rm-mechalabs.vercel.app</p>
+<div class="card">
+<h3>Technical Design</h3>
+<p>Precision CAD modeling and detailed manufacturing documentation.</p>
+</div>
+</div>
+</div>
 </section>
 
 <footer>
-© 2026 RM Mechalabs — Engineering the Future
+© 2026 RM Mechalabs. All rights reserved.
 </footer>
-
-<a class="whatsapp" href="https://wa.me/254798470854?text=Hello%20RM%20Mechalabs">WhatsApp</a>
-
-<script>
-
-/* LOADER */
-window.addEventListener("load",()=>{
-document.getElementById("loader").classList.add("hidden")
-})
-
-/* SCROLL REVEAL */
-function reveal(){
-document.querySelectorAll('.card,.project').forEach(el=>{
-if(el.getBoundingClientRect().top < window.innerHeight - 100){
-el.classList.add('visible')
-}
-})
-}
-window.addEventListener("scroll",reveal)
-reveal()
-
-/* COUNTERS */
-let started=false
-function counter(id,target){
-let el=document.getElementById(id)
-let count=0
-let step=Math.ceil(target/100)
-let interval=setInterval(()=>{
-count+=step
-if(count>=target){el.innerText=target;clearInterval(interval)}
-else{el.innerText=count}
-},20)
-}
-window.addEventListener("scroll",()=>{
-if(started) return
-let pos=document.querySelector(".metrics").getBoundingClientRect().top
-if(pos < window.innerHeight -100){
-started=true
-counter("c1",32)
-counter("c2",18)
-counter("c3",97)
-}
-})
-
-</script>
 
 </body>
 </html>
