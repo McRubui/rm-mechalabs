@@ -21,6 +21,8 @@ line-height:1.6;
 overflow-x:hidden;
 }
 
+/* HEADER */
+
 header{
 display:flex;
 justify-content:space-between;
@@ -41,7 +43,10 @@ margin-left:25px;
 text-decoration:none;
 font-weight:500;
 }
+
 nav a:hover{color:#3b82f6}
+
+/* HERO */
 
 .hero{
 height:100vh;
@@ -82,7 +87,28 @@ font-weight:600;
 transition:.3s;
 z-index:2;
 }
+
 .btn:hover{transform:scale(1.05)}
+
+/* ROTATING GEAR */
+
+.gear{
+position:absolute;
+width:500px;
+opacity:0.15;
+top:50%;
+left:50%;
+transform:translate(-50%,-50%);
+animation:spin 25s linear infinite;
+z-index:1;
+}
+
+@keyframes spin{
+0%{transform:translate(-50%,-50%) rotate(0deg)}
+100%{transform:translate(-50%,-50%) rotate(360deg)}
+}
+
+/* SECTIONS */
 
 .section{
 padding:100px 8%;
@@ -93,11 +119,15 @@ font-size:34px;
 margin-bottom:50px;
 }
 
+/* GRID */
+
 .grid{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
 gap:30px;
 }
+
+/* CARDS */
 
 .card{
 background:#0f172a;
@@ -105,10 +135,13 @@ padding:30px;
 border-radius:14px;
 transition:.4s;
 }
+
 .card:hover{
 transform:translateY(-10px);
 box-shadow:0 20px 50px rgba(0,0,0,.6);
 }
+
+/* FOUNDER */
 
 .founder{
 display:flex;
@@ -122,11 +155,15 @@ width:250px;
 border-radius:14px;
 }
 
+/* CTA */
+
 .cta{
 text-align:center;
 background:#0f172a;
 padding:80px 20px;
 }
+
+/* FOOTER */
 
 footer{
 text-align:center;
@@ -134,6 +171,8 @@ padding:50px;
 color:#64748b;
 background:#020617;
 }
+
+/* WHATSAPP BUTTON */
 
 .whatsapp{
 position:fixed;
@@ -147,24 +186,11 @@ font-weight:700;
 text-decoration:none;
 }
 
-/* 3D GEAR */
-
-.gear{
-position:absolute;
-width:600px;
-opacity:.07;
-animation:spin 40s linear infinite;
-z-index:1;
-}
-
-@keyframes spin{
-from{transform:rotate(0deg)}
-to{transform:rotate(360deg)}
-}
+/* MOBILE */
 
 @media(max-width:768px){
 .hero h1{font-size:36px}
-.gear{width:400px}
+.gear{width:350px}
 }
 
 </style>
@@ -174,17 +200,19 @@ to{transform:rotate(360deg)}
 
 <header>
 <h2>RM Mechalabs</h2>
+
 <nav>
 <a href="#services">Services</a>
 <a href="#projects">Projects</a>
 <a href="#investors">Investors</a>
 <a href="#contact">Contact</a>
 </nav>
+
 </header>
 
 <section class="hero">
 
-<img src="https://upload.wikimedia.org/wikipedia/commons/3/3a/Gear_icon.svg" class="gear">
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Gear_icon.svg/1024px-Gear_icon.svg.png" class="gear">
 
 <h1>Engineering Automation & Mechanical Innovation For Modern Industry</h1>
 
@@ -195,6 +223,7 @@ to{transform:rotate(360deg)}
 </section>
 
 <section class="section" id="services">
+
 <h2>Core Capabilities</h2>
 
 <div class="grid">
@@ -215,6 +244,7 @@ to{transform:rotate(360deg)}
 </div>
 
 </div>
+
 </section>
 
 <section class="section founder">
