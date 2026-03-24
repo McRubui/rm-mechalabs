@@ -5,192 +5,294 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>RM Mechalabs | Engineering & Automation Solutions</title>
 
-<meta name="description" content="RM Mechalabs delivers mechanical engineering, automation systems and industrial consultancy solutions across manufacturing and production sectors.">
-
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700;900&display=swap" rel="stylesheet">
-
 <style>
 
-*{margin:0;padding:0;box-sizing:border-box}
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Segoe UI,Arial,sans-serif;
+scroll-behavior:smooth;
+}
 
 body{
-font-family:'Inter',sans-serif;
-background:#050b18;
-color:#e5e7eb;
+background:#050b16;
+color:white;
 line-height:1.6;
 overflow-x:hidden;
 }
 
-/* HEADER */
+/* NAV */
 
-header{
+nav{
+position:fixed;
+width:100%;
 display:flex;
 justify-content:space-between;
 align-items:center;
 padding:20px 8%;
-background:rgba(5,11,24,.85);
-backdrop-filter:blur(12px);
-position:fixed;
-width:100%;
-z-index:999;
+background:rgba(0,0,0,0.6);
+backdrop-filter:blur(10px);
+z-index:1000;
 }
 
-header h2{font-weight:700}
+nav h2{
+background:linear-gradient(90deg,#8a7cff,#3bd1ff);
+-webkit-background-clip:text;
+color:transparent;
+}
 
-nav a{
-color:#cbd5e1;
-margin-left:25px;
+nav ul{
+display:flex;
+gap:30px;
+list-style:none;
+}
+
+nav ul li a{
+color:white;
 text-decoration:none;
-font-weight:500;
+font-size:14px;
+transition:0.3s;
 }
 
-nav a:hover{color:#3b82f6}
+nav ul li a:hover{
+color:#4ecbff;
+}
 
 /* HERO */
 
 .hero{
 height:100vh;
+background:linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.7)),
+url("https://images.unsplash.com/photo-1581093458791-9f3c3900df9b?auto=format&fit=crop&w=1600&q=80");
+background-size:cover;
 display:flex;
-flex-direction:column;
-justify-content:center;
 align-items:center;
-text-align:center;
-padding:0 20px;
-background:radial-gradient(circle at center,#0f172a,#050b18);
+padding:0 8%;
 position:relative;
-overflow:hidden;
 }
 
 .hero h1{
-font-size:52px;
-font-weight:900;
-max-width:900px;
-z-index:2;
+font-size:65px;
+background:linear-gradient(90deg,#8b6cff,#3bd1ff);
+-webkit-background-clip:text;
+color:transparent;
+}
+
+.tagline{
+color:#a78bfa;
+margin-top:10px;
 }
 
 .hero p{
-margin-top:20px;
-color:#94a3b8;
-font-size:20px;
-max-width:650px;
-z-index:2;
+margin-top:25px;
+max-width:550px;
+color:#e5e5e5;
+font-size:18px;
 }
 
-.btn{
-margin-top:35px;
-background:#3b82f6;
-color:white;
-padding:16px 32px;
-border-radius:8px;
-text-decoration:none;
-font-weight:600;
-transition:.3s;
-z-index:2;
-}
-
-.btn:hover{transform:scale(1.05)}
-
-/* ROTATING GEAR */
+/* rotating gears */
 
 .gear{
 position:absolute;
-width:500px;
-opacity:0.15;
-top:50%;
-left:50%;
-transform:translate(-50%,-50%);
-animation:spin 25s linear infinite;
-z-index:1;
+width:160px;
+opacity:.15;
+animation:spin 20s linear infinite;
+}
+
+.gear2{
+right:10%;
+bottom:20%;
+width:200px;
+animation:spinReverse 25s linear infinite;
 }
 
 @keyframes spin{
-0%{transform:translate(-50%,-50%) rotate(0deg)}
-100%{transform:translate(-50%,-50%) rotate(360deg)}
+from{transform:rotate(0)}
+to{transform:rotate(360deg)}
 }
 
-/* SECTIONS */
-
-.section{
-padding:100px 8%;
+@keyframes spinReverse{
+from{transform:rotate(360deg)}
+to{transform:rotate(0)}
 }
 
-.section h2{
-font-size:34px;
-margin-bottom:50px;
+/* SECTION */
+
+section{
+padding:110px 8%;
 }
 
-/* GRID */
+.section-title{
+font-size:42px;
+margin-bottom:40px;
+background:linear-gradient(90deg,#9b87ff,#4ecbff);
+-webkit-background-clip:text;
+color:transparent;
+}
 
-.grid{
+/* COMPANY */
+
+.overview{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-gap:30px;
+grid-template-columns:1fr 1fr;
+gap:40px;
+align-items:center;
 }
 
-/* CARDS */
-
-.card{
-background:#0f172a;
-padding:30px;
-border-radius:14px;
-transition:.4s;
-}
-
-.card:hover{
-transform:translateY(-10px);
-box-shadow:0 20px 50px rgba(0,0,0,.6);
+.overview img{
+width:100%;
+border-radius:10px;
+box-shadow:0 0 30px rgba(80,150,255,0.2);
 }
 
 /* FOUNDER */
 
 .founder{
-display:flex;
-gap:50px;
-align-items:center;
-flex-wrap:wrap;
+text-align:center;
+background:linear-gradient(#050b16,#071a30);
 }
 
 .founder img{
-width:250px;
-border-radius:14px;
+width:160px;
+height:160px;
+border-radius:50%;
+background:white;
+margin-bottom:20px;
+}
+
+.founder h3{
+font-size:28px;
+margin-bottom:10px;
+}
+
+.founder span{
+color:#9b87ff;
+}
+
+/* SERVICES */
+
+.services{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:40px;
+}
+
+.service-box{
+background:#0e1a2b;
+padding:35px;
+border-radius:10px;
+transition:0.4s;
+border:1px solid rgba(255,255,255,.05);
+}
+
+.service-box:hover{
+transform:translateY(-10px);
+box-shadow:0 0 25px rgba(70,150,255,0.3);
+}
+
+.service-box h3{
+margin-bottom:15px;
+color:#a78bfa;
+}
+
+.service-box ul{
+margin-top:10px;
+padding-left:20px;
+}
+
+.service-box li{
+margin-bottom:8px;
 }
 
 /* CTA */
 
 .cta{
 text-align:center;
-background:#0f172a;
-padding:80px 20px;
+background:
+linear-gradient(rgba(0,0,0,.8),rgba(0,0,0,.8)),
+url("https://images.unsplash.com/photo-1535223289827-42f1e9919769?auto=format&fit=crop&w=1600&q=80");
+background-size:cover;
+}
+
+.cta h2{
+margin-bottom:25px;
+}
+
+.cta a{
+display:inline-block;
+padding:15px 45px;
+background:#39ff14;
+color:black;
+font-weight:bold;
+border-radius:6px;
+text-decoration:none;
+transition:.3s;
+}
+
+.cta a:hover{
+box-shadow:0 0 15px #39ff14;
+}
+
+/* CONTACT */
+
+.contact{
+max-width:600px;
+margin:auto;
+text-align:center;
+}
+
+.contact form{
+display:flex;
+flex-direction:column;
+gap:15px;
+margin-top:30px;
+}
+
+.contact input,
+.contact textarea{
+padding:15px;
+border:none;
+border-radius:6px;
+background:#0e1a2b;
+color:white;
+}
+
+.contact button{
+padding:15px;
+background:#4ecbff;
+border:none;
+border-radius:6px;
+font-weight:bold;
+cursor:pointer;
 }
 
 /* FOOTER */
 
 footer{
+background:black;
 text-align:center;
-padding:50px;
-color:#64748b;
-background:#020617;
+padding:30px;
+color:#aaa;
+margin-top:100px;
 }
 
-/* WHATSAPP BUTTON */
+/* RESPONSIVE */
 
-.whatsapp{
-position:fixed;
-right:20px;
-bottom:20px;
-background:#25D366;
-color:white;
-padding:16px 22px;
-border-radius:50px;
-font-weight:700;
-text-decoration:none;
+@media(max-width:900px){
+
+.hero h1{
+font-size:45px;
 }
 
-/* MOBILE */
+.overview{
+grid-template-columns:1fr;
+}
 
-@media(max-width:768px){
-.hero h1{font-size:36px}
-.gear{width:350px}
+nav ul{
+display:none;
+}
+
 }
 
 </style>
@@ -198,92 +300,183 @@ text-decoration:none;
 
 <body>
 
-<header>
-<h2>RM Mechalabs</h2>
-
 <nav>
-<a href="#services">Services</a>
-<a href="#projects">Projects</a>
-<a href="#investors">Investors</a>
-<a href="#contact">Contact</a>
-</nav>
 
-</header>
+<h2>RM MECHALABS</h2>
+
+<ul>
+<li><a href="#">HOME</a></li>
+<li><a href="#about">ABOUT</a></li>
+<li><a href="#services">SERVICES</a></li>
+<li><a href="#contact">CONTACT US</a></li>
+</ul>
+
+</nav>
 
 <section class="hero">
 
-<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Gear_icon.svg/1024px-Gear_icon.svg.png" class="gear">
-
-<h1>Engineering Automation & Mechanical Innovation For Modern Industry</h1>
-
-<p>We design, optimize and automate mechanical systems that drive industrial performance and operational efficiency.</p>
-
-<a href="#contact" class="btn">Request Consultation</a>
-
-</section>
-
-<section class="section" id="services">
-
-<h2>Core Capabilities</h2>
-
-<div class="grid">
-
-<div class="card">
-<h3>Industrial Automation</h3>
-<p>Smart automation systems designed for production efficiency.</p>
-</div>
-
-<div class="card">
-<h3>Mechanical Design</h3>
-<p>High-performance CAD engineering & system architecture.</p>
-</div>
-
-<div class="card">
-<h3>Engineering Consultancy</h3>
-<p>Strategic technical guidance for industrial growth.</p>
-</div>
-
-</div>
-
-</section>
-
-<section class="section founder">
-
-<img src="logo.png">
+<img class="gear" src="https://cdn-icons-png.flaticon.com/512/159/159469.png">
+<img class="gear gear2" src="https://cdn-icons-png.flaticon.com/512/159/159469.png">
 
 <div>
-<h2>Founder & CEO</h2>
-<h3>Mark Rubui</h3>
-<p>Mechanical Engineer and founder of RM Mechalabs, focused on building scalable engineering systems and automation solutions across industrial sectors.</p>
+
+<h1>RM MECHALABS</h1>
+
+<p class="tagline">Where mechanics meets intelligence</p>
+
+<p>
+Delivering precision engineering solutions that drive innovation and efficiency across industries. 
+We transform concepts into reality with cutting-edge technology and expert craftsmanship
+</p>
+
 </div>
 
 </section>
 
-<section class="cta" id="investors">
+<section id="about">
 
-<h2>Strategic Partnerships & Investment</h2>
+<h2 class="section-title">Company Overview</h2>
 
-<p>We are open to strategic collaborations and investment partnerships to scale advanced engineering solutions.</p>
+<div class="overview">
 
-<a href="mailto:rmmechalabs@hotmail.com" class="btn">Contact Founder</a>
+<div>
+
+<p>
+RM Mechalabs is a premier engineering solutions provider specializing in mechanical design, automation, and engineering consultancy. With a team of experienced engineers and cutting-edge technology, we deliver innovative solutions that transform concepts into reality.
+</p>
+
+<br>
+
+<p>
+Our commitment to excellence drives us to provide services that exceed client expectations while maintaining the highest standards of quality and precision. We pride ourselves on our ability to tackle complex engineering challenges and deliver results that drive business success.
+</p>
+
+<br>
+
+<p>
+From initial concept to final implementation, we work closely with our clients to ensure every project meets their unique requirements and industry standards.
+</p>
+
+</div>
+
+<img src="https://images.unsplash.com/photo-1581093588401-22c3b5d76d7e?auto=format&fit=crop&w=900&q=80">
+
+</div>
 
 </section>
 
-<section class="section" id="contact">
+<section class="founder">
 
-<h2>Contact</h2>
+<h2 class="section-title">Meet Our Founder</h2>
 
-<p>📞 +254 798 470 854</p>
-<p>✉ rmmechalabs@hotmail.com</p>
-<p>🌍 rm-mechalabs.vercel.app</p>
+<img src="https://cdn-icons-png.flaticon.com/512/847/847969.png">
+
+<h3>MARK RUBUI</h3>
+
+<span>Founder & CEO</span>
+
+<p style="max-width:700px;margin:30px auto">
+
+With experience in mechanical engineering and automation, Mark founded RM Mechalabs with a vision to provide innovative engineering solutions that transform industries. His leadership drives the company's commitment to excellence and customer satisfaction.
+
+</p>
+
+</section>
+
+<section id="services">
+
+<h2 class="section-title">Core Services</h2>
+
+<div class="services">
+
+<div class="service-box">
+
+<h3>Machine Automation</h3>
+
+<p>
+Design engineering with custom automation solutions for enhanced productivity and operational efficiency.
+</p>
+
+<ul>
+<li>Custom automation system design</li>
+<li>Process optimization and efficiency</li>
+<li>Integration with existing infrastructure</li>
+<li>PLC programming and control systems</li>
+</ul>
+
+</div>
+
+<div class="service-box">
+
+<h3>Engineering Project Consultation</h3>
+
+<p>
+Comprehensive consultation services for all your engineering needs, from planning to execution.
+</p>
+
+<ul>
+<li>Detailed mechanical analysis</li>
+<li>Cost-effective solution planning</li>
+<li>Feasibility studies and recommendations</li>
+<li>Project management and oversight</li>
+</ul>
+
+</div>
+
+<div class="service-box">
+
+<h3>AutoCAD & Technical Design</h3>
+
+<p>
+Precision engineering drawings and detailed technical documentation for manufacturing.
+</p>
+
+<ul>
+<li>2D/3D CAD modeling and drafting</li>
+<li>Technical specification development</li>
+<li>Prototype design and engineering</li>
+<li>Assembly and fabrication drawings</li>
+</ul>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="cta">
+
+<h2>
+Need a custom solution? Let's discuss your project requirements.
+</h2>
+
+<a href="#">Get In Touch</a>
+
+</section>
+
+<section id="contact" class="contact">
+
+<h2 class="section-title">Contact Us</h2>
+
+<form>
+
+<input type="text" placeholder="Your Name">
+
+<input type="email" placeholder="Email Address">
+
+<textarea rows="5" placeholder="Your Message"></textarea>
+
+<button type="submit">Send Message</button>
+
+</form>
 
 </section>
 
 <footer>
-© 2026 RM Mechalabs — Engineering the Future
-</footer>
 
-<a class="whatsapp" href="https://wa.me/254798470854?text=Hello%20RM%20Mechalabs">WhatsApp</a>
+<p>© 2026 RM Mechalabs | Engineering & Automation Solutions</p>
+
+</footer>
 
 </body>
 </html>
