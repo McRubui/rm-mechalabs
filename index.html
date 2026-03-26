@@ -41,10 +41,14 @@ font-weight:bold;
 
 .hero{
 background:url("hero.png") center/cover no-repeat;
-height:100vh;
+min-height:100vh;
 display:flex;
 align-items:center;
-padding:0 8%;
+padding:120px 8% 80px 8%;
+}
+
+.hero-content{
+max-width:700px;
 }
 
 .hero h1{
@@ -53,14 +57,14 @@ margin-bottom:10px;
 }
 
 .hero p{
-max-width:600px;
+margin-top:15px;
 }
 
-/* MAIN PAGE */
+/* MAIN CONTENT */
 
 .main{
 background:url("background.png") center/cover no-repeat;
-padding:120px 8% 80px 8%;
+padding:80px 8%;
 }
 
 /* FOUNDER */
@@ -171,18 +175,20 @@ margin-top:5px;
 
 <div>
 <a href="#home">Home</a>
-<a href="#about">About</a>
+<a href="#founder">Founder</a>
 <a href="#services">Services</a>
-<a href="#contact">Contact Us</a>
+<a href="#contact">Contact</a>
 </div>
 
 </nav>
 
 
 
+<!-- HERO WITH COMPANY OVERVIEW -->
+
 <section id="home" class="hero">
 
-<div>
+<div class="hero-content">
 
 <h1>RM MECHALABS</h1>
 
@@ -192,15 +198,7 @@ margin-top:5px;
 Delivering precision engineering solutions that drive innovation and efficiency across industries. We transform concepts into reality with cutting-edge technology and expert craftsmanship
 </p>
 
-</div>
-
-</section>
-
-
-
-<div class="main">
-
-<h2 id="about">Company Overview</h2>
+<h2>Company Overview</h2>
 
 <p>
 RM Mechalabs is a premier engineering solutions provider specializing in mechanical design, automation and engineering consultancy. With a team of experienced engineers and cutting-edge technology, we deliver innovative solutions that transform concepts into reality.
@@ -214,9 +212,16 @@ Our commitment to excellence drives us to provide services that exceed client ex
 From initial concept to final implementation, we work closely with our clients to ensure every project meets their unique requirements and industry standards.
 </p>
 
+</div>
+
+</section>
 
 
-<h2>Meet Our Founder</h2>
+
+<div class="main">
+
+
+<h2 id="founder">Meet Our Founder</h2>
 
 <div class="founder">
 
@@ -323,9 +328,9 @@ RM Mechalabs – Premier engineering solutions provider specializing in mechanic
 <b>Quick Links</b>
 
 <a href="#home">Home</a>
-<a href="#about">About Us</a>
-<a href="#services">Our Services</a>
-<a href="#contact">Contact Us</a>
+<a href="#founder">Founder</a>
+<a href="#services">Services</a>
+<a href="#contact">Contact</a>
 
 </div>
 
