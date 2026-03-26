@@ -1,88 +1,251 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
- Mechalabs | Engineering & Automation Solutions</title>
+
+<title>RM Mechalabs</title>
 
 <style>
 
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Segoe UI,Arial,sans-serif;
-scroll-behavior:smooth;
-}
-
 body{
-background:#050b16;
+margin:0;
+font-family:Arial, Helvetica, sans-serif;
 color:white;
-line-height:1.6;
-overflow-x:hidden;
 }
 
-/* NAV */
+/* NAVIGATION */
 
 nav{
-position:fixed;
-width:100%;
+background:black;
+padding:15px 8%;
 display:flex;
 justify-content:space-between;
 align-items:center;
-padding:20px 8%;
-background:rgba(0,0,0,0.6);
-backdrop-filter:blur(10px);
-z-index:1000;
 }
 
-nav h2{
-background:linear-gradient(90deg,#8a7cff,#3bd1ff);
--webkit-background-clip:text;
-color:transparent;
-}
-
-nav ul{
-display:flex;
-gap:30px;
-list-style:none;
-}
-
-nav ul li a{
+nav a{
 color:white;
 text-decoration:none;
-font-size:14px;
-transition:0.3s;
-}
-
-nav ul li a:hover{
-color:#4ecbff;
+margin-left:20px;
+font-weight:bold;
 }
 
 /* HERO */
 
 .hero{
-height:100vh;
-background:linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.7)),
-url("https://images.unsplash.com/photo-1581093458791-9f3c3900df9b?auto=format&fit=crop&w=1600&q=80");
+background-image:url("hero.png");
 background-size:cover;
+background-position:center;
+height:100vh;
 display:flex;
 align-items:center;
-padding:0 8%;
-position:relative;
+padding-left:8%;
+}
+
+.hero-text{
+max-width:600px;
 }
 
 .hero h1{
-font-size:65px;
-background:linear-gradient(90deg,#8b6cff,#3bd1ff);
--webkit-background-clip:text;
-color:transparent;
-}
-
-.tagline{
-color:#a78bfa;
-margin-top:10px;
+font-size:60px;
+margin-bottom:10px;
 }
 
 .hero p{
-margin-top:25px;
+line-height:1.6;
+}
+
+/* BUTTONS */
+
+.button{
+display:inline-block;
+background:#6c63ff;
+padding:12px 25px;
+margin-top:20px;
+margin-right:10px;
+color:white;
+text-decoration:none;
+border-radius:6px;
+}
+
+/* MAIN SECTIONS */
+
+.section{
+background-image:url("background.png");
+background-size:cover;
+background-position:center;
+padding:80px 8%;
+}
+
+.section h2{
+font-size:40px;
+margin-bottom:20px;
+}
+
+/* FOUNDER */
+
+.founder{
+display:flex;
+align-items:center;
+gap:40px;
+flex-wrap:wrap;
+}
+
+.founder img{
+width:220px;
+border-radius:10px;
+}
+
+/* FORM */
+
+form{
+max-width:500px;
+}
+
+input, textarea{
+width:100%;
+padding:12px;
+margin-top:10px;
+border:none;
+border-radius:5px;
+}
+
+button{
+margin-top:15px;
+padding:12px 25px;
+background:#6c63ff;
+color:white;
+border:none;
+border-radius:5px;
+cursor:pointer;
+}
+
+/* FOOTER */
+
+footer{
+background:black;
+text-align:center;
+padding:20px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+
+<nav>
+
+<div><strong>RM Mechalabs</strong></div>
+
+<div>
+<a href="#overview">Company Overview</a>
+<a href="#founder">Founder</a>
+<a href="#contact">Contact</a>
+</div>
+
+</nav>
+
+
+
+<section class="hero">
+
+<div class="hero-text">
+
+<h1>RM MECHALABS</h1>
+
+<p><b>Where mechanics meets intelligence</b></p>
+
+<p>
+Delivering precision engineering solutions that drive innovation and efficiency across industries. We transform concepts into reality with cutting-edge technology and expert craftsmanship
+</p>
+
+<a class="button" href="https://wa.me/2340000000000">WhatsApp</a>
+<a class="button" href="mailto:info@rmmechalabs.com">Email</a>
+
+</div>
+
+</section>
+
+
+
+<section id="overview" class="section">
+
+<h2>Company Overview</h2>
+
+<p>
+RM Mechalabs is a premier engineering solutions provider specializing in mechanical design, automation, and engineering consultancy. With a team of experienced engineers and cutting-edge technology, we deliver innovative solutions that transform concepts into reality.
+</p>
+
+<p>
+Our commitment to excellence drives us to provide services that exceed client expectations while maintaining the highest standards of quality and precision. We pride ourselves on our ability to tackle complex engineering challenges and deliver results that drive business success.
+</p>
+
+<p>
+From initial concept to final implementation, we work closely with our clients to ensure every project meets their unique requirements and industry standards.
+</p>
+
+</section>
+
+
+
+<section id="founder" class="section">
+
+<h2>Founder</h2>
+
+<div class="founder">
+
+<img src="markrubui.jpg">
+
+<div>
+
+<h3>Mark Rubui</h3>
+
+<p>
+Founder of RM Mechalabs with a passion for engineering innovation and precision technology. Dedicated to delivering cutting-edge mechanical and automation solutions.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<section id="contact" class="section">
+
+<h2>Client Inquiry</h2>
+
+<p>Send us your project inquiry and our engineering team will contact you.</p>
+
+<form action="mailto:info@rmmechalabs.com" method="post">
+
+<input type="text" placeholder="Your Name" required>
+
+<input type="email" placeholder="Your Email" required>
+
+<input type="text" placeholder="Company Name">
+
+<textarea rows="5" placeholder="Describe your project"></textarea>
+
+<button type="submit">Submit Inquiry</button>
+
+</form>
+
+</section>
+
+
+
+<footer>
+
+© RM Mechalabs
+
+</footer>
+
+
+</body>
+</html>
