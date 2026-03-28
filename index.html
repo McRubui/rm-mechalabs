@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 
 <meta charset="UTF-8">
@@ -26,8 +25,13 @@ width:100%;
 background:black;
 display:flex;
 justify-content:space-between;
+align-items:center;
 padding:15px 8%;
 z-index:1000;
+}
+
+nav img{
+height:45px;
 }
 
 nav a{
@@ -48,7 +52,7 @@ padding:120px 8% 80px 8%;
 }
 
 .hero-content{
-max-width:700px;
+max-width:750px;
 }
 
 .hero h1{
@@ -56,11 +60,7 @@ font-size:60px;
 margin-bottom:10px;
 }
 
-.hero p{
-margin-top:15px;
-}
-
-/* MAIN CONTENT */
+/* MAIN */
 
 .main{
 background:url("background.png") center/cover no-repeat;
@@ -74,28 +74,33 @@ display:flex;
 align-items:center;
 gap:40px;
 flex-wrap:wrap;
-margin-top:30px;
+margin-top:40px;
 }
 
 .founder img{
-width:220px;
-border-radius:10px;
+width:200px;
+height:200px;
+border-radius:50%;
+object-fit:cover;
 }
 
 /* SERVICES */
 
 .services{
 margin-top:40px;
+animation:fadeUp 1s ease;
 }
 
-.services ul{
-padding-left:20px;
+@keyframes fadeUp{
+from{opacity:0; transform:translateY(40px);}
+to{opacity:1; transform:translateY(0);}
 }
 
-/* CONTACT */
+/* VISION MISSION */
 
-.contact{
-margin-top:50px;
+.vision, .mission{
+margin-top:40px;
+animation:fadeUp 1s ease;
 }
 
 /* FORM */
@@ -123,9 +128,9 @@ border-radius:6px;
 cursor:pointer;
 }
 
-/* FLOATING BUTTONS */
+/* FLOAT BUTTONS */
 
-.float-buttons{
+.float{
 position:fixed;
 right:20px;
 bottom:20px;
@@ -134,32 +139,21 @@ flex-direction:column;
 gap:10px;
 }
 
-.float-buttons a{
-background:#25D366;
-color:white;
+.float a{
 padding:12px 18px;
-border-radius:50px;
+border-radius:30px;
+color:white;
 text-decoration:none;
 font-weight:bold;
 }
 
-.float-buttons a.email{
-background:#007BFF;
-}
-
-/* FOOTER */
+.whatsapp{background:#25D366;}
+.email{background:#007BFF;}
 
 footer{
-margin-top:60px;
+margin-top:80px;
 border-top:1px solid white;
 padding-top:20px;
-}
-
-.quick-links a{
-display:block;
-color:white;
-text-decoration:none;
-margin-top:5px;
 }
 
 </style>
@@ -168,10 +162,9 @@ margin-top:5px;
 
 <body>
 
-
 <nav>
 
-<div><b>RM MECHALABS</b></div>
+<img src="logo.png">
 
 <div>
 <a href="#home">Home</a>
@@ -184,7 +177,7 @@ margin-top:5px;
 
 
 
-<!-- HERO WITH COMPANY OVERVIEW -->
+<!-- HERO -->
 
 <section id="home" class="hero">
 
@@ -195,21 +188,21 @@ margin-top:5px;
 <b>Where mechanics meets intelligence</b>
 
 <p>
-Delivering precision engineering solutions that drive innovation and efficiency across industries. We transform concepts into reality with cutting-edge technology and expert craftsmanship
+Delivering precision engineering solutions that drive innovation and efficiency across industries.We transform concepts into reality with cutting-edge technologyand expert craftsmanship
 </p>
 
 <h2>Company Overview</h2>
 
 <p>
-RM Mechalabs is a premier engineering solutions provider specializing in mechanical design, automation and engineering consultancy. With a team of experienced engineers and cutting-edge technology, we deliver innovative solutions that transform concepts into reality.
+RM Mechalabs is a premier engineering solutions provider specializingin mechanical design, automation, and engineering consultancy. With ateam of experienced engineers and cutting-edge technology, we deliver innovative solutions that transform concepts into reality.
 </p>
 
 <p>
-Our commitment to excellence drives us to provide services that exceed client expectations while maintaining the highest standards of quality and precision. We pride ourselves on our ability to tackle complex engineering challenges and deliver results that drive business success.
+Our commitment to excellence drives us to provide servicesthatexceed client expectations while maintaining the highest standards of qualityand precision.We pride ourselves on our ability to tackle complex engineering challenges and deliverresultsthat drive business SuccesS.
 </p>
 
 <p>
-From initial concept to final implementation, we work closely with our clients to ensure every project meets their unique requirements and industry standards.
+From initialconcept to final implementation, we work closely with our clients to ensure every project meets their unique requirements and industry standards.
 </p>
 
 </div>
@@ -220,8 +213,7 @@ From initial concept to final implementation, we work closely with our clients t
 
 <div class="main">
 
-
-<h2 id="founder">Meet Our Founder</h2>
+<h2 id="founder">MEET OURFOUNDER</h2>
 
 <div class="founder">
 
@@ -233,7 +225,7 @@ From initial concept to final implementation, we work closely with our clients t
 <b>Founder & CEO</b>
 
 <p>
-With experience in mechanical engineering and automation, Mark founded RM Mechalabs with a vision to provide innovative engineering solutions that transform industries. His leadership drives the company's commitment to excellence and customer satisfaction.
+With experiencein mechanical engineering and automation,Mark founded RM Mechalabs with a vision to provide innovative engineering solutions that transform industries. His leadership drives the company's commitment to excellence and customer satisfaction.
 </p>
 
 </div>
@@ -242,50 +234,90 @@ With experience in mechanical engineering and automation, Mark founded RM Mechal
 
 
 
-<h2 id="services">Core Services</h2>
+<div class="services" id="services">
 
-<div class="services">
+<h2>CORE SERVICES</h2>
 
-<h3>Machine Automation</h3>
+<p>
+We provide comprehensiveengineering solutions tailored tomeet yourspecific industry requirements and business objectives.
+</p>
+
+<h3>MachineAutomation</h3>
+
+<p>
+Design engineering with custom automation solutions forenhanced productivity and operational efficiency.
+</p>
 
 <ul>
 <li>Custom automation system design</li>
 <li>Process optimization and efficiency</li>
 <li>Integration with existing infrastructure</li>
-<li>Programming and control systems</li>
+<li>PLC programming and control systems</li>
 </ul>
 
 <h3>Engineering Project Consultation</h3>
 
+<p>
+Comprehensive consultation services for all your engineering needs, from planning to execution.
+</p>
+
 <ul>
 <li>Detailed mechanical analysis</li>
 <li>Cost-effective solution planning</li>
-<li>Feasibility studies and recommendations</li>
+<li>Feasibility studiesand recommendations</li>
+<li>Project management and oversight</li>
 </ul>
+
+<h3>AutoCAD &Technical Design</h3>
+
+<p>
+Precision engineeringdrawings and detailed technical documentation formanúfaçturing
+</p>
+
+<ul>
+<li>2D/3DCAD modeling and drafting</li>
+<li>Technical speçification development</li>
+<li>Prototype design and engineering</li>
+<li>Assemblyand fabricatioh drawings</li>
+</ul>
+
+<p>
+Need a custom sotution?et's discussyourproject requirements.
+</p>
 
 </div>
 
 
 
+<div class="vision">
+
 <h2>Vision</h2>
 
 <p>
-To be the leading engineering solutions provider, recognized for excellence, innovation, quality, and customer satisfaction. We envision a future where our mechanical design and automation expertise drives industrial transformation across Africa and beyond.
+To be the leading engineering solutions provider, recognized for excellence n innovatíon, quality, and customer satisfaction. We envision afuture where our mechaniçaldesign and automationexperti�e drives industrial transformation acrossAfrica and beyond.
 </p>
 
+</div>
 
+
+
+<div class="mission">
 
 <h2>Mission</h2>
 
 <p>
-To deliver precision, affordable engineering solutions that empower businesses to achieve operational excellence. We combine technical expertise with innovative thinking to provide customized solutions that meet the unique needs of each client.
+Todeliver precision; affordable engineering solutions that empower businesses to achieveoperational excellence. We combine technical expertise with innovative thinkingto provide customized solutions that meet theunique needs ofeach client.
 </p>
 
+</div>
 
 
-<h2 id="contact">Contact Us</h2>
 
-<div class="contact">
+<h2>CONTACT US</h2>
+
+<p>
+Ready to start your project? Contact us today and let's discuss how we can help bring your engineering vision to life.
+</p>
 
 <p><b>Phone</b><br>
 +254798470854
@@ -295,17 +327,15 @@ To deliver precision, affordable engineering solutions that empower businesses t
 rmmechalabs@hotmail.com
 </p>
 
-<p>
-Ready to start your project? Contact us today and let's discuss how we can help bring your engineering vision to life.
-</p>
-
 <h3>Send us a Message</h3>
 
 <form action="https://formsubmit.co/rmmechalabs@hotmail.com" method="POST">
 
 <input type="text" name="name" placeholder="Your Name" required>
 
-<input type="email" name="email" placeholder="Your Email" required>
+<input type="email" name="email" placeholder="EmailAddress" required>
+
+<input type="text" name="phone" placeholder="Phone Number">
 
 <textarea name="message" rows="5" placeholder="Your Message"></textarea>
 
@@ -313,28 +343,15 @@ Ready to start your project? Contact us today and let's discuss how we can help 
 
 </form>
 
-</div>
-
 
 
 <footer>
 
 <p>
-RM Mechalabs – Premier engineering solutions provider specializing in mechanical design, automation, and engineering consultancy. Transforming concepts into reality.
+Premier engineering solutionsprovider specializing in mechanical design,automation,and engineering consultancy. Transforming concepts into reality.
 </p>
 
-<div class="quick-links">
-
-<b>Quick Links</b>
-
-<a href="#home">Home</a>
-<a href="#founder">Founder</a>
-<a href="#services">Services</a>
-<a href="#contact">Contact</a>
-
-</div>
-
-<p>© 2026 RM Mechalabs. All rights reserved.</p>
+<p>© 2026 RM Mechalabs. All rightsreserved.</p>
 
 </footer>
 
@@ -342,13 +359,12 @@ RM Mechalabs – Premier engineering solutions provider specializing in mechanic
 
 
 
-<div class="float-buttons">
+<div class="float">
 
-<a href="https://wa.me/254798470854">WhatsApp</a>
+<a class="whatsapp" href="https://wa.me/254798470854">WhatsApp</a>
 <a class="email" href="mailto:rmmechalabs@hotmail.com">Email</a>
 
 </div>
-
 
 </body>
   </html>
