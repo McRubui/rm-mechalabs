@@ -13,7 +13,7 @@
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:Arial, Helvetica, sans-serif;
+font-family:Arial;
 scroll-behavior:smooth;
 }
 
@@ -22,7 +22,7 @@ color:white;
 background:url("background.png") center/cover fixed no-repeat;
 }
 
-/* NAVBAR */
+/* NAV */
 
 nav{
 position:fixed;
@@ -31,9 +31,8 @@ width:100%;
 display:flex;
 justify-content:space-between;
 align-items:center;
-padding:15px 60px;
-background:rgba(0,0,0,0.75);
-backdrop-filter:blur(10px);
+padding:20px 60px;
+background:rgba(0,0,0,0.8);
 z-index:1000;
 }
 
@@ -43,15 +42,14 @@ height:100px;
 
 nav ul{
 display:flex;
+gap:40px;
 list-style:none;
-gap:35px;
 }
 
-nav ul li a{
+nav a{
 color:white;
 text-decoration:none;
-font-weight:600;
-font-size:17px;
+font-weight:bold;
 }
 
 /* HERO */
@@ -61,7 +59,7 @@ min-height:100vh;
 background:url("hero.png") center/cover no-repeat;
 display:flex;
 align-items:center;
-padding:160px 80px;
+padding:180px 80px;
 }
 
 .hero-content{
@@ -70,18 +68,17 @@ max-width:750px;
 
 .hero h1{
 font-size:60px;
-margin-bottom:15px;
+margin-bottom:10px;
 }
 
 .hero p{
-line-height:1.8;
 margin-bottom:18px;
-font-size:17px;
+line-height:1.8;
 }
 
-/* MAIN PAGE */
+/* PAGE */
 
-.main{
+.page{
 padding:100px 80px;
 }
 
@@ -103,45 +100,33 @@ border:6px solid #06b6d4;
 object-fit:cover;
 }
 
-.founder-text{
-max-width:600px;
-}
-
-.founder-text h2{
-margin-bottom:8px;
-}
-
 /* CARDS */
 
 .card{
 background:rgba(0,0,0,0.6);
 padding:35px;
-border-radius:12px;
+border-radius:10px;
 margin-bottom:40px;
 transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .card:active{
-transform:scale(1.03) translateY(-2px);
-box-shadow:0 0 20px rgba(6,182,212,0.5),
+transform: scale(1.03) translateY(-2px);
+box-shadow: 0 0 20px rgba(6,182,212,0.5),
 0 10px 40px rgba(0,0,0,0.4);
 }
 
-/* CONTACT */
-
-.contact p{
-margin-bottom:10px;
-}
+/* FORM */
 
 form{
 display:flex;
 flex-direction:column;
 gap:15px;
-max-width:420px;
+max-width:400px;
 margin-top:20px;
 }
 
-input, textarea{
+input,textarea{
 padding:12px;
 border:none;
 border-radius:6px;
@@ -150,9 +135,9 @@ border-radius:6px;
 button{
 padding:12px;
 background:#06b6d4;
-color:white;
 border:none;
 border-radius:6px;
+color:white;
 font-weight:bold;
 cursor:pointer;
 }
@@ -167,20 +152,20 @@ background:#25D366;
 padding:15px 22px;
 border-radius:30px;
 color:white;
-font-weight:bold;
 text-decoration:none;
+font-weight:bold;
 }
 
 .email{
 position:fixed;
 bottom:80px;
 right:20px;
-background:#0a66ff;
+background:#007BFF;
 padding:15px 22px;
 border-radius:30px;
 color:white;
-font-weight:bold;
 text-decoration:none;
+font-weight:bold;
 }
 
 </style>
@@ -188,23 +173,18 @@ text-decoration:none;
 
 <body>
 
-
-<!-- NAVBAR -->
-
 <nav>
 
 <img src="logo.png">
 
 <ul>
 <li><a href="#home">Home</a></li>
-<li><a href="#founder">Founder</a></li>
+<li><a href="#founder">About</a></li>
 <li><a href="#services">Services</a></li>
-<li><a href="#vision">Vision</a></li>
 <li><a href="#contact">Contact</a></li>
 </ul>
 
 </nav>
-
 
 <!-- HERO -->
 
@@ -224,26 +204,27 @@ We transform concepts into reality with cutting-edge technology and expert craft
 <h2>Company Overview</h2>
 
 <p>
-RM Mechalabs is a premier engineering solutions provider specializing in mechanical design, automation and engineering consultancy. With a team of experienced engineers and cutting-edge technology, we deliver innovative solutions that transform concepts into reality.
+RM Mechalabs is a premier engineering solutions provider specializing in mechanical design, automation,
+and engineering consultancy. With a team of experienced engineers and cutting-edge technology,
+we deliver innovative solutions that transform concepts into reality.
 </p>
 
 <p>
-Our commitment to excellence drives us to provide services that exceed client expectations while maintaining the highest standards of quality and precision. We pride ourselves on our ability to tackle complex engineering challenges and deliver results that drive business success.
+Our commitment to excellence drives us to provide services that exceed client expectations while maintaining
+the highest standards of quality and precision. We pride ourselves on our ability to tackle complex engineering
+challenges and deliver results that drive business success.
 </p>
 
 <p>
-From initial concept to final implementation, we work closely with our clients to ensure every project meets their unique requirements and industry standards.
+From initial concept to final implementation, we work closely with our clients to ensure every project meets
+their unique requirements and industry standards.
 </p>
 
 </div>
 
 </section>
 
-
-<!-- MAIN CONTENT -->
-
-<div class="main">
-
+<div class="page">
 
 <!-- FOUNDER -->
 
@@ -251,25 +232,38 @@ From initial concept to final implementation, we work closely with our clients t
 
 <img src="founder.jpg">
 
-<div class="founder-text">
+<div>
 
-<h2>MARK RUBUI</h2>
+<h2>MEET OUR FOUNDER</h2>
+
+<h3>MARK RUBUI</h3>
+
 <p><b>Founder & CEO</b></p>
 
 <p>
-With experience in mechanical engineering and automation, Mark Rubui founded RM Mechalabs with the goal of delivering innovative engineering solutions that improve productivity, efficiency and industrial performance. His passion for engineering excellence drives the company's commitment to providing high quality mechanical design, automation systems and professional engineering consultancy.
+With experience in mechanical engineering and automation, Mark founded RM Mechalabs with a vision
+to provide innovative engineering solutions that transform industries. His leadership drives the
+company's commitment to excellence and customer satisfaction.
 </p>
 
 </div>
 
 </div>
 
-
 <!-- SERVICES -->
 
 <div id="services">
 
-<h2 style="margin-bottom:25px;">Core Services</h2>
+<h2>What We Offer</h2>
+
+<p>
+We provide comprehensive engineering solutions tailored to meet your specific industry requirements
+and business objectives.
+</p>
+
+<br>
+
+<h2>Core Services</h2>
 
 <div class="card">
 
@@ -281,64 +275,104 @@ Design engineering with custom automation solutions for enhanced productivity an
 
 <ul>
 <li>Custom automation system design</li>
-<li>Process optimization and efficiency improvement</li>
-<li>Integration with existing mechanical systems</li>
-<li>Control systems and programming</li>
+<li>Process optimization and efficiency</li>
+<li>Integration with existing infrastructure</li>
+<li>PLC programming and control systems</li>
 </ul>
 
 </div>
-
 
 <div class="card">
 
 <h3>Engineering Project Consultation</h3>
 
 <p>
-Comprehensive consultation services for engineering projects from concept development to implementation.
+Comprehensive consultation services for all your engineering needs, from planning to execution.
 </p>
 
 <ul>
-<li>Mechanical design consultation</li>
-<li>Engineering analysis and planning</li>
-<li>Feasibility studies and project recommendations</li>
+<li>Detailed mechanical analysis</li>
+<li>Cost-effective solution planning</li>
+<li>Feasibility studies and recommendations</li>
+<li>Project management and oversight</li>
 </ul>
 
 </div>
 
-</div>
+<div class="card">
 
-
-<!-- VISION -->
-
-<div class="card" id="vision">
-
-<h2>Vision</h2>
+<h3>AutoCAD Technical Design</h3>
 
 <p>
-To be the leading engineering solutions provider recognized for innovation, precision and reliability while contributing to industrial advancement across Africa and beyond.
+Precision engineering drawings and detailed technical documentation for manufacturing.
+</p>
+
+<ul>
+<li>2D / 3D CAD modeling and drafting</li>
+<li>Technical specification development</li>
+<li>Prototype design and engineering</li>
+<li>Assembly and fabrication drawings</li>
+</ul>
+
+</div>
+
+<p>
+Need a custom solution? Let's discuss your project requirements.
 </p>
 
 </div>
 
+<!-- PURPOSE -->
 
-<!-- MISSION -->
+<div class="card">
+
+<h2>Vision</h2>
+
+<p>
+To be the leading engineering solutions provider, recognized for excellence in innovation,
+quality, and customer satisfaction. We envision a future where our mechanical design and
+automation expertise drives industrial transformation across Africa and beyond.
+</p>
+
+</div>
 
 <div class="card">
 
 <h2>Mission</h2>
 
 <p>
-To deliver high quality engineering solutions through mechanical innovation, automation technology and professional consultancy while maintaining the highest standards of efficiency, reliability and client satisfaction.
+To deliver precision, affordable engineering solutions that empower businesses to achieve
+operational excellence. We combine technical expertise with innovative thinking to provide
+customized solutions that meet the unique needs of each client.
 </p>
 
 </div>
 
+<div class="card">
+
+<h2>Our Core Values</h2>
+
+<ul>
+<li>Innovation</li>
+<li>Technical Excellence</li>
+<li>Customer Focus</li>
+<li>Integrity</li>
+</ul>
+
+</div>
 
 <!-- CONTACT -->
 
-<div class="contact" id="contact">
+<div id="contact">
 
-<h2 style="margin-bottom:20px;">Contact Us</h2>
+<h2>Contact Us</h2>
+
+<p>
+Ready to start your project? Contact us today and let's discuss how we can help bring your
+engineering vision to life.
+</p>
+
+<br>
 
 <p><b>Phone</b></p>
 <p>+254798470854</p>
@@ -348,17 +382,13 @@ To deliver high quality engineering solutions through mechanical innovation, aut
 <p><b>Email</b></p>
 <p>rmmechalabs@hotmail.com</p>
 
-<br>
-
-<h3>Send an Inquiry</h3>
-
 <form action="https://formsubmit.co/rmmechalabs@hotmail.com" method="POST">
 
 <input type="text" name="name" placeholder="Your Name" required>
 
 <input type="email" name="email" placeholder="Your Email" required>
 
-<textarea name="message" rows="5" placeholder="Your Message"></textarea>
+<textarea name="message" rows="5" placeholder="Message"></textarea>
 
 <button type="submit">Send Message</button>
 
@@ -368,13 +398,9 @@ To deliver high quality engineering solutions through mechanical innovation, aut
 
 </div>
 
-
-<!-- FLOAT BUTTONS -->
-
 <a class="email" href="mailto:rmmechalabs@hotmail.com">Email</a>
 
 <a class="whatsapp" href="https://wa.me/254798470854">WhatsApp</a>
-
 
 </body>
 </html>
