@@ -12,6 +12,7 @@ body{
 margin:0;
 font-family:Arial, Helvetica, sans-serif;
 color:white;
+background:black; /* FIXED BACKGROUND */
 scroll-behavior:smooth;
 }
 
@@ -31,7 +32,8 @@ z-index:1000;
 }
 
 nav img{
-height:40px;
+height:60px; /* LOGO SIZE FIXED */
+width:auto;
 }
 
 nav a{
@@ -62,8 +64,9 @@ line-height:1.7;
 /* MAIN SECTION */
 
 .main{
-background:url("photo2.png") center/cover fixed;
+background:url("photo2.png") center/cover fixed no-repeat;
 padding:80px;
+min-height:100vh;
 }
 
 /* FOUNDER */
@@ -73,6 +76,7 @@ display:flex;
 align-items:center;
 gap:40px;
 margin-top:80px;
+flex-wrap:wrap;
 }
 
 .founder img{
@@ -212,8 +216,13 @@ From initial concept to final implementation, we work closely with our clients t
 <p><b>Founder & CEO</b></p>
 
 <p>
-With experience in mechanical engineering and automation, Mark founded RM Mechalabs with a vision to provide innovative engineering solutions that transform industries. His leadership drives the company's commitment to excellence and customer satisfaction.
+Mark Rubui is the founder of RM Mechalabs and the driving force behind the company’s vision of delivering practical, efficient, and innovative engineering solutions. With strong expertise in mechanical engineering, automation systems, and technical design, he established RM Mechalabs to help businesses transform complex engineering ideas into real, functional solutions.
 </p>
+
+<p>
+His passion for engineering excellence and problem solving has guided the company toward developing reliable mechanical systems, intelligent automation solutions, and precise technical designs. Through leadership, innovation, and dedication to quality, he continues to position RM Mechalabs as a trusted engineering solutions provider committed to helping industries improve productivity, efficiency, and operational performance.
+</p>
+
 </div>
 
 </div>
@@ -359,4 +368,4 @@ RM Mechalabs — Premier engineering solutions provider specializing in mechanic
 <a class="email" href="mailto:rmmechalabs@hotmail.com">Email</a>
 
 </body>
-  </html>
+</html>
